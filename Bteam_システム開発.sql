@@ -45,7 +45,7 @@ CREATE TABLE  orders
 );
 
 データ追加
-１　顧客情報
+１顧客情報
 INSERT INTO users(user_id,user_name,user_pass,user_pc,user_address)VALUES("2101156@asjuku.ac.jp","桑野","2101156","812-0016","福岡県博多区");
 INSERT INTO users(user_id,user_name,user_pass,user_pc,user_address)VALUES("2101216@asjuku.ac.jp","渡邊","2101216","812-0016","福岡県博多区");
 INSERT INTO users(user_id,user_name,user_pass,user_pc,user_address)VALUES("2101149@asjuku.ac.jp","梶原","2101149","812-0016","福岡県博多区");
@@ -67,3 +67,14 @@ INSERT INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("01","パエリア
 INSERT INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("01","トルティージャ",1000);
 INSERT INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("01","アヒージョ",1000);
 
+アップデート文
+UPDATE users
+ SET user_id = '2101132@s.asojuku.ac.jp'
+ WHERE user_name = '井浦';
+
+2101131@s.asojuku.ac.jp阿部
+2101132@s.asojuku.ac.jp井浦
+2101462@s.asojuku.ac.jp牛島
+2101149@s.asojuku.ac.jp梶原
+2101156@s.asojuku.ac.jp桑野
+2101216@s.asojuku.ac.jp渡邊
