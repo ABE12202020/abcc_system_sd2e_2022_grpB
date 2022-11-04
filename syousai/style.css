@@ -1,4 +1,4 @@
-Z#menudiv{
+#menudiv{
 	width:206px;
 	margin-right:20px;
 	margin-left:auto;
@@ -19,3 +19,14 @@ Z#menudiv{
 .textimg{
 	text-align:center;
 }
+
+dt{
+	float:left;
+}
+
+dt::after{
+	content: ":"
+}
+
+#card{
+	text-align:left;
