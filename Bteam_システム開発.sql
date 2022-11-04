@@ -54,18 +54,18 @@ INSERT INTO users(user_id,user_name,user_pass,user_pc,user_address)VALUES("21014
 INSERT INTO users(user_id,user_name,user_pass,user_pc,user_address)VALUES("2101132@asjuku.ac.jp","井浦","2101132","812-0016","福岡県博多区");
 
 ２商品情報
-INSERT INTO shohins(shohin_id,shohin_name,shohin_price,shohin_pass)VALUES("01","麻婆豆腐",1000);
-INSERT INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("01","春巻き",800);
-INSERT INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("01","小籠包",800);
-INSERT INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("01","トッポギ",800);
-INSERT INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("02","ビビンバ",900);
-INSERT INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("03","サムギョプサル",1500);
-INSERT INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("01","ピデ","550");
-INSERT INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("02","トルコアイス",350);
-INSERT INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("03","ケバブ",800);
-INSERT INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("01","パエリア",1500);
-INSERT INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("01","トルティージャ",1000);
-INSERT INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("01","アヒージョ",1000);
+INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("01","麻婆豆腐",1000,);
+INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("01","春巻き",800,);
+INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("01","小籠包",800,);
+INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("01","トッポギ",800,);
+INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("02","ビビンバ",900,);
+INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("03","サムギョプサル",1500,);
+INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("01","ピデ",550,);
+INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("02","トルコアイス",350,);
+INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("03","ケバブ",800,);
+INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("01","パエリア",1500,);
+INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("01","トルティージャ",1000,);
+INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("01","アヒージョ",1000,);
 
 アップデート文
 UPDATE users
