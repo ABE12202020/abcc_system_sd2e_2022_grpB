@@ -1,10 +1,11 @@
 
 #maindiv{
-	width:800px;
-	margin-left:auto;
+	margin-left:300px;
 	margin-right:auto;
-	margin-top:8%;
+	padding-left:200px;
+
 }
+
 
 .logo{
 	text-align:center;
