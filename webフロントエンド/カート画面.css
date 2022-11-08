@@ -1,5 +1,5 @@
 body {
-    color:#663300;
+    color:#000000;
     }
     td {
     font-size:13px;
@@ -8,3 +8,9 @@ body {
     A:visited { color: #660000; }
     A:active { color: #ff3300; }
     A:hover { color: #ff3300; } 
+
+    li {
+        list-style:none;
+        /*デフォルトの指定解除*/
+        float:left;
+        }
