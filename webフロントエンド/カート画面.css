@@ -1,0 +1,10 @@
+body {
+    color:#663300;
+    }
+    td {
+    font-size:13px;
+    }
+    A:link { color: #663333; }
+    A:visited { color: #660000; }
+    A:active { color: #ff3300; }
+    A:hover { color: #ff3300; } 
