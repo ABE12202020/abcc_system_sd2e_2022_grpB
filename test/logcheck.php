@@ -10,7 +10,9 @@ $userList=$dbm->getUserTblByIdAndPass($_POST['userid'],$_POST['userpass']);
 
 $getCnt=count($userList);
 if($getCnt>=1){
-    echo "<h2>ようこそ！".$userList[0]["user_name"]."さん</h2>";
+    // echo "<h2>ようこそ！".$userList[0]["user_name"]."さん</h2>";
+     header('Location: ../商品一覧.html');
+    
 }else{
     echo "<h2>ログインに失敗しました</h2>";
 }
