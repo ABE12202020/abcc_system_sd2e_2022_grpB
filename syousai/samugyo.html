@@ -15,12 +15,39 @@
 <link href="style.css"rel="stylesheet"type="text/css">
 </head>
 <body>
-  
-  
+  <nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #000000;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="../img/rogo b t.pn"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">トップ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">お気に入り</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">殿堂入り</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ランキング</a>
+          </li>
+        </ul>
+        <form role="search">
+          <input class="form-control" type="search" placeholder="レシピを検索" aria-label="Search">
+        </form>
+      </div>
+    </div>
+  </nav>
+  <br>
 
       <div class="maindiv">
         <div class="textimg">
-          <img src="../img/サムギョプサル.img" width="420" height="350" class="rounded">
+          <img src="../img/samugyo.png" width="420" height="350" class="rounded">
         </div>
           <div class="textimg text-align">
             <h1>サムギョプサル</h1>
@@ -47,7 +74,7 @@
                         <dt>原材料名</dt><dd>豚バラ肉</dd>
                         <dt>保存方法</dt><dd>高温、直射日光を避けてください。</dd>
                         <dt>原産国</dt><dd>韓国</dd>
-                        <dt>輸入者の<br>名称及び住所</dt><dd>スリーボンド貿易株式会社<br>東京都渋谷区恵比寿1-18-15</dd>
+                        <dt>輸入者の<br>名称及び住所</dt><dd>aso株式会社<br>東京都渋谷区恵比寿1-18-15</dd>
                         <dt>賞味期限</dt><dd>2023年8月19日</dd>
                       </dl>
                     </div>
@@ -59,20 +86,42 @@
                       <div class="card-body">
                       <h5 class="card-title text-warning">配送について<br>————————————————</h5>
                       <dl class="text-dark text-left">
-                        <dt>送料</dt><dd>330ml ／ 本<br>※48本セットにてお届けします</dd>
-                        <dt>配送業者</dt><dd>水（鉱泉水）／炭酸</dd>
-                        <dt>配送可能地域</dt><dd>高温、直射日光を避けてください。</dd>
+                        <dt>送料</dt><dd>550円／件<br> ※送料は商品ごとにかかります。<br> ※配送先によって送料が異なる可能性があります。</dd>
+                        <dt>配送業者</dt><dd>佐川急便（沖縄県・離島のみヤマト運輸）</dd>
+                        <dt>配送可能地域</dt><dd>全国</dd>
                       </dl>
                       </div>
                   </div>
                 </div>
 
-                <div class="col-lg-1"></div>
-
+                <div class="row m-1 mt-4">
+                  <div class="col-md-4"></div>
+                  <!-- <div style="display: flex;">
+                    <div>{{ count }}</div>
+                    <button
+                        class="button"
+                        @click = "decrement"
+                    >-1</button>
+                    <button
+                        class="button"
+                        @click = "increment"
+                    >+1</button>
+                </div> -->
+                  <div class="col-md-4"></div>
+                </div>
+                <div class="row m-1 mt-3">
+                  <div class="col-2"></div>
+                  <div class="col-8">
+                    <div class="d-grid gap-2">
+                      <button class="btn btn-warning btn-lg text-white" type="button">カートに入れる</button>
+                    </div>
+                  </div>
+                  <div class="col-2"></div>
+                </div>
               </div>
             </div>
-            <br>
-          <div>    
-            <button class="btn btn-warning btn-lg text-dark btn-align:center;" type="button" onclick="location.href='../カート試作/カート試作.html'">カートに入れる</button><br><button onclick="location.href='URL'">戻る</button>
           </div>
       </div>
+      <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./script.js"></script> -->
+</body>
