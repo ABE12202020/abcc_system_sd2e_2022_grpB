@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿<?php
+	require "component.php"
+	session_start();
+?>
+
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -18,7 +23,7 @@ background-position: center 60%;
 </head>
 
 <body>
-<nav class="navbar navbar-expand-md navbar-dark fixed-top" aria-label="Fourth navbar example" style="background-color: #000000;">
+<nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #000000;">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="../img/rogo b t.png" width="20%"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,7 +70,6 @@ background-position: center 60%;
 				<img class="card-img-top" src="../img/samugyo.png">
 				<div class="card-body">
 					<h5 class="card-title"><font size="5">大人気の韓国料理！サムギョプサル</font></h5>
-					<p>550円</p>
 					<a href="../syousai/samugyo.html">>>詳細へ</a>
 					
 				</div>
@@ -76,7 +80,6 @@ background-position: center 60%;
 				<img class="card-img-top" src="../img/bibinba.png">
 				<div class="card-body">
 					<h5 class="card-title"><font size="5">野菜たっぷりビビンバ</font></h5>
-					<p>550円</p>
 					<a href="../syousai/bibinba.html">>>詳細へ</a>
 				</div>
 			</div>
@@ -87,7 +90,6 @@ background-position: center 60%;
 				<img class="my-3 w-1">
 				<div class="card-body">
 					<h5 class="card-title"><font size="5">韓国棒餅の甘辛トッポギ</font></h5>
-					<p>550円</p>
 					<a href="../syousai/toppogi.html">>>詳細へ</a>
 				</div>
 			</div>
@@ -97,7 +99,6 @@ background-position: center 60%;
 				<img class="card-img-top" src="../img/paeria.png">
 				<div class="card-body">
 					<h5 class="card-title"><font size="5">海の幸パエリア</font></h5>
-					<p>550円</p>
 					<a href="../syousai/paeria.html">>>詳細へ</a>
 				</div>
 			</div>
@@ -107,7 +108,6 @@ background-position: center 60%;
 				<img class="card-img-top" src="../img/toruty.png">
 				<div class="card-body">
 					<h5 class="card-title"><font size="5">本格！トルティージャ</font></h5>
-					<p>550円</p>
 					<a href="../syousai/toruty.html">>>詳細へ</a>
 				</div>
 			</div>
@@ -117,7 +117,6 @@ background-position: center 60%;
 				<img class="card-img-top" src="../img/ahi03-8.jpg">
 				<div class="card-body">
 					<h5 class="card-title"><font size="5">具だくさんアヒージョ</font></h5>
-					<p>550円</p>
 					<a href="../syousai/ahijo.html">>>詳細へ</a>
 				</div>
 			</div>
@@ -127,7 +126,6 @@ background-position: center 60%;
 				<img class="card-img-top" src="../img/pide.png">
 				<div class="card-body">
 					<h5 class="card-title"><font size="5">牛肉と野菜のピデ</font></h5>
-					<p>550円</p>
 					<a href="../syousai/pide.html">>>詳細へ</a>
 				</div>
 			</div>
@@ -137,7 +135,6 @@ background-position: center 60%;
 				<img class="card-img-top" src="../img/torukoice.png">
 				<div class="card-body">
 					<h5 class="card-title"><font size="5">のび～るトルコアイス</font></h5>
-					<p>550円</p>
 					<a href="../syousai/torukoice.html">>>詳細へ</a>
 				</div>
 			</div>
@@ -147,7 +144,6 @@ background-position: center 60%;
 				<img class="card-img-top" src="../img/kebabu.png">
 				<div class="card-body">
 					<h5 class="card-title"><font size="5">野菜が摂れるケバブ</font></h5>
-					<p>550円</p>
 					<a href="../syousai/kebabu.html">>>詳細へ</a>
 				</div>
 			</div>
