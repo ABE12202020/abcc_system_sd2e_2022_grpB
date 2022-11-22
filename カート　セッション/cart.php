@@ -17,18 +17,18 @@
             }else{
                 $array[] = [
                     "product_name" => $_POST["product_name"],
-                    "num" => $POST["num"]
+                    "num" => $_POST["num"]
                 ];
             }
         }
             //商品の削除
             //商品名だけがPOSTされたとき
-            if(isset($_POST["product_name"]) && !isset($_POST["num"])){
+            if(isset($_POST["product_name"]) && !isset($_POST["num"]) ){
                 $array_product_name = array_column($array,"product_name");
                 //商品を削除る
                 if(in_array($_POST["product_name"],$array_product_name)){
-                    $index = array_search($POST,["product_name"],$array_product_name);
-                    unset($arrau[$index]);
+                    $index = array_search($_POST["product_name"],$array_product_name);
+                    unset($array[$index]);
                     $array = array_values($array);
                 }
             }
@@ -55,7 +55,7 @@
     <div class="couneainer text-center">
 
     <div class="couneainer text-center">
-        <h1>Hello, shoping!</h1>
+        <h1>カート画面</h1>
 
         <?php
         $gokei=0;
@@ -69,13 +69,13 @@
                     $index = array_search($value['product_name'],$array_product_name);
                     $price = $product[$index]["price"];
                     $img = $product[$index]["img"];
-                    echo "<div><img src=./".$img."class ='img-fluid' style='width:120px; hight:aout;'></div>";
+                    echo "<div><img src=./".$img."class='img-fluid' style='width:120px; hight:aout;'></div>";
                 }
                 echo "</div>\n";
-                echo "<div class ='col -3'>";
+                echo "<div class ='col-3'>";
                     //echo $key;
                     echo "<h3>".$value['product_name']."</h3>";
-                    echo "<h4 class = 'text-danger'>".number_format($price)."円</h4>";
+                    echo "<h4 class='text-danger'>".number_format($price)."円</h4>";
                     echo "<h4>数量:".$value['num']."</h4>";
                 echo "</div>\n";
                 echo "<div class ='col-3' style='dispay:inline-flex;align-items: center;'>";
