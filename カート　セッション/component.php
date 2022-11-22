@@ -1,22 +1,27 @@
 <?php 
 $product = [
     [    
-        "product_name" => "青Tシャツ",
+        "product_name" => "麻婆豆腐",
         "price" => 2480 ,
         "img" => "mabo.jpg"
     ],
     [    
-        "product_name" => "紫Tシャツ",
+        "product_name" => "アヒージョ",
         "price" => 2480 ,
         "img" => "1001.jpg"
     ],
     [    
-        "product_name" => "緑Tシャツ",
+        "product_name" => "パエリア",
         "price" => 2480 ,
         "img" => "1001.jpg"
     ],
     [    
-        "product_name" => "赤Tシャツ",
+        "product_name" => "トルコアイス",
+        "price" => 2480 ,
+        "img" => "1001.jpg"
+    ],
+    [    
+        "product_name" => "炒飯",
         "price" => 2480 ,
         "img" => "1001.jpg"
     ]
