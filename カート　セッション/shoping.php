@@ -12,7 +12,9 @@
   </head>
   <body>
     <div class="couneainer text-center">
-    <h1>Hello, world!</h1>
+    <h1>世界の料理</h1>
+
+    <!-- 一覧画面からカートに商品が入っているか確認できる -->
     <strong class="h6 text-danger"><a href="cart.php" class="text-danger"> 買い物かご</a>は、
         <?php
             if( isset($_SESSION[ "cart"]) && count($_SESSION["cart"])>0){          
@@ -21,28 +23,30 @@
             }else{
               echo "空です。";
             }
-          ?>  
-              
-</strong> 
+          ?>   
+      </strong> 
+
 <div class="row">
       <?php 
-      for($i=0; $i<4;$i++){
+      for($i=0;$i<5;$i++){
           ?> 
-            <div class="col-md-3">
+          <div class="col-md-3">
             <?php 
             echo "<img src='".$product[$i]["img"]."' class='img-fluid rounded'>";
-            echo "<h3>". $product[$i]["product_name"]."</h3>";
+            echo "<h3>".$product[$i]["product_name"]."</h3>";
             echo "<span class='text-danger'>".number_format($product[$i]["price"])."円</span>";
             ?>
-            </div>
-
+          
           <form action="cart.php" class="mt-3" method="post">
               <input type="hidden" name="product_name" value="<?= $product[$i]["product_name"] ?>">
               <select name="num">
                   <option value=1>1</option> 
                   <option value=2>2</option>
                   <option value=3>3</option> 
+                  <option value=4>4</option>
+                  <option value=5>5</option>
               </select>
+              <!-- <button type="submit" class="btn btn-primary"><a href="./shoping.php">カート</a></button>  -->
               <button type="submit" class="btn btn-primary">カゴに入れる</button> 
           </form> 
         </div> 
