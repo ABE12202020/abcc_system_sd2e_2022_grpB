@@ -12,7 +12,47 @@
   </head>
   <body>
     <div class="couneainer text-center">
-    <h1>世界の料理</h1>
+    <div class="couneainer text-center">
+    <nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #FF9933;">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#"><img src="../img/rogo b t.png" width="20%"></a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+	
+		  <div class="collapse navbar-collapse" id="navbarsExample04">
+			<ul class="navbar-nav me-auto mb-2 mb-md-0">
+			  <li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="#"><font size="5">トップ</font></a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#"><font size="5">お気に入り</font></a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#"><font size="5">殿堂入り</font></a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#"><font size="5">ランキング</font></a>
+			  </li>
+			</ul>
+			<form role="search">
+			  <input class="form-control" type="search" placeholder="レシピを検索" aria-label="Search">
+			</form>
+		  </div>
+		</div>
+	  </nav>
+    <div name="maindiv" class="container-fluids">
+	<div class="bg-img p-5">
+		<div class="container">
+			<img src="../img/rogo b t.png" class="img-fluid" width="30%">
+			<p class="text-white text-center"><br></p>
+		</div>
+	</div>
+	<div class="row mt-2 mb-1">
+		<div class="col-12"  style="background-color:#f7a10c;">
+			<h2 class="text-center text-white p-1"><i class="bi bi-hand-thumbs-up"></i>おすすめのメニュー</h2>
+		</div>
+</div>
 
     <!-- 一覧画面からカートに商品が入っているか確認できる -->
     <strong class="h6 text-danger"><a href="cart.php" class="text-danger"> 買い物かご</a>は、
