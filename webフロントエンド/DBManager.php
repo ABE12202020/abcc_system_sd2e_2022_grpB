@@ -19,15 +19,3 @@ class DBManager {
 	}
 }
 ?>
-	<!-- // function userList(){
-	// 	$ps2 = $pdo->prepare($sql2);
-    //     $ps2->bindValue(1,'%'. $_POST['id'] .'%',
-    //     PDO::PARAM_STR);
-	// 	$ps2->execute();
-	
-		
-	// 	if($ps2==$_POST['ipass']){
-	// 		$ps2="SELECT username FROM uer_tbl WHERE $_POST['ipass']=$selectdata";
-	// 	}
-	// 	echo $ps2;
-	// } -->
