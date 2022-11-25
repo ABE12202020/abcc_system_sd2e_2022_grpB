@@ -13,7 +13,7 @@ if($getCnt>=1){
     // location.href = 'http://long-usa-8493.mond.jp/test/product_list.html';
     // echo "<h2>ようこそ！".$userList[0]["user_name"]."さん</h2>";
 }else{
-    header('Location: http://long-usa-8493.mond.jp/test/login_2.html');
+    header('Location: http://long-usa-8493.mond.jp/test/login_complete.html');
     exit;
     // echo "	http://long-usa-8493.mond.jp/test/login_2.html";
 }
