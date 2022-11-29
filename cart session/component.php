@@ -1,29 +1,29 @@
 <?php 
 $product = [
     [    
-        "product_name" => "ピデ",
+        "product_name" => "麻婆豆腐",
         "price" => 2480 ,
-        "img" => "img/pide.png"
+        "img" => "mabo.jpg"
     ],
     [    
         "product_name" => "アヒージョ",
         "price" => 2480 ,
-        "img" => "img/ahi-jo.png"
+        "img" => "1001.jpg"
     ],
     [    
         "product_name" => "パエリア",
         "price" => 2480 ,
-        "img" => "img/paeria.png"
+        "img" => "1001.jpg"
     ],
     [    
         "product_name" => "トルコアイス",
         "price" => 2480 ,
-        "img" => "img/torukoice.png"
+        "img" => "1001.jpg"
     ],
     [    
-        "product_name" => "麻婆豆腐",
+        "product_name" => "炒飯",
         "price" => 2480 ,
-        "img" => "img/mabo.jpg"
+        "img" => "1001.jpg"
     ]
 ];
 ?>

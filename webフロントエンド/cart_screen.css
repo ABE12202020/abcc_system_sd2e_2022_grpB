@@ -1,0 +1,48 @@
+.border_sample2{
+    border-bottom:1px solid #000;
+}
+
+ul {
+    list-style: none;
+  }
+
+  .side-img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  p.side-txt {
+    display: inline-block;
+    width: 400px;
+    margin-left: 15px;
+  }
+
+  #child_flame {
+    position: absolute;
+    bottom: 370px; 
+    right: 500px;  
+}
+
+  .button-text {
+    text-align: center;
+  }
+
+  .box11{
+    width: 300px;
+    height: 70px;
+    padding: 0;
+    margin-right: 0;
+    margin-left: auto;
+    border: thin solid;
+    }
+
+    .hoge_button {
+      position: relative;
+			top: 0px;
+			left: 500px;
+   }
+
+   hr {
+    text-align: left;
+    margin-right: 0;
+    }
+    
