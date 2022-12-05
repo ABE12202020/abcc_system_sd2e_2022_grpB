@@ -67,10 +67,10 @@ INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("10",
 INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("11","トルティージャ",1000,"toruty.png");
 INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("12","アヒージョ",1000,"ahi-jo.png");
 
--- アップデート文
--- UPDATE users
---  SET user_id = '2101132@s.asojuku.ac.jp'
---  WHERE user_name = '井浦';
+アップデート文
+UPDATE users
+SET user_id = '2101132@s.asojuku.ac.jp'
+WHERE user_name = '井浦';
 
 -- 2101131@s.asojuku.ac.jp阿部
 -- 2101132@s.asojuku.ac.jp井浦
