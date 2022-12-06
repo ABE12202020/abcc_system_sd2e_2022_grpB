@@ -5,12 +5,18 @@ require_once 'cart_1_abe.php';
 //DBManagerをnewする
 $dbm = new cart_1_abe();
 
-$userList=$dbm->getUserTblByIdAndPass($shohin_name);
+$aaa='01';
 
-$getCnt=count($userList);
+$userList=$dbm->getUserTblByIdAndPass($aaa);
+$yeah;
+echo $userList;
+foreach($userList as $row){
+    $yeah  =  $row['shohin_name'];
+}
+$getCnt=count($yeah);
 
 if($getCnt>=1){
-    echo "<h2>$userList[0]["shohin_name"]</h2>";
+    echo "<h2>$yeah</h2>";
 }else{
     echo "<h2>ログインに失敗しました</h2>";
 }
