@@ -51,12 +51,12 @@
 	</div>
 	<div class="row mt-2 mb-1">
 		<div class="col-12"  style="background-color:#f7a10c;">
-			<h2 class="text-center text-white p-1"><i class="bi bi-hand-thumbs-up"></i>おすすめのメニュー</h2>
+			<h2 class="text-center text-white p-1"><i class="bi bi-hand-thumbs-up"></i>世界の料理</h2>
 		</div>
 	</div>
 
     <div class="couneainer text-center">
-    <h1>世界の料理</h1>
+    <!-- <h1>世界の料理</h1> -->
 
 <!-- 一覧画面からカートに商品が入っているか確認できる　別にいらん -->
     <strong class="h6 text-danger"><a href="cart.php" class="text-danger"> 買い物かご</a>は、
@@ -70,30 +70,20 @@
           ?>   
       </strong> 
 <!-- 画像　名前　値段出力 -->
-<div class="row">
-      <?php 
-      for($i=0;$i<8;$i++){
-          ?> 
-          <div class="col-md-3">
-            <?php 
-            echo "<img src='".$product[$i]["img"]."' class='img-fluid rounded'>";
-            echo "<h3>".$product[$i]["product_name"]."</h3>";
-            echo "<span class='text-danger'>".number_format($product[$i]["price"])."円</span><br>";
+<!-- <for文> -->
+<form><?php 
+for($i=0;$i<count($product);$i++){
+echo "<img src='".$product[$i]["img"]."' class='img-fluid rounded'>";
+echo "<h3>".$product[$i]["product_name"]."</h3>";
+echo "<span class='text-danger'>".number_format($product[$i]["price"])."円</span><br>";
+printf('<div class="col-md-3"><button formaction="%s">商品詳細</button></div>', $product[$i]["url"], $product[$i]["url"]);
+}
+?></form>
+
+<!-- <div class="row p-1 gy-4"> -->
 
 
-            echo "<form>";
-            foreach ($arr as $tmp) printf('<button formaction = "%s">%s</button>',$tmp['url'],
-            $tmp['name']);
-            echo "</form>"; 
-            ?>   
-            <!-- <div class="col-md-3">
-            <a href="pide.php">商品詳細</a>
-            </div>   -->
 
-        </div>
-      <?php
-      }
-      ?>
 
       
 

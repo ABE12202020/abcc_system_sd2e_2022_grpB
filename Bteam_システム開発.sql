@@ -54,7 +54,7 @@ INSERT INTO users(user_id,user_name,user_pass,user_pc,user_address)VALUES("21014
 INSERT INTO users(user_id,user_name,user_pass,user_pc,user_address)VALUES("2101132@asjuku.ac.jp","井浦","2101132","812-0016","福岡県博多区");
 
 ２商品情報
-INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("01","麻婆豆腐",1000,"../img/ahi-jo.jpg");
+INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("01","麻婆豆腐",1000,"mabo.jpg");
 INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("02","春巻き",800,"harumaki.jpg");
 INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("03","小籠包",800,"syouronpo.jpg");
 INSERT INTO shohins(shohin_id,shohin_name,shohin_price,picture_pass)VALUES("04","トッポギ",800,"toppogi.png");
