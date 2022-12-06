@@ -11,19 +11,16 @@ class cart_1_abe {
         return $pdo;
     }
 
-//data照合
-public function getUserTblByIdAndPass($shohin_name){
-$pdo=$this->dbConnect();
-$sql = "SELECT * FROM shohins WHERE shohin_id = 999 ";
-$ps=$pdo->prepare($sql);
-$ps->execute();
-$searchArray=$ps->fetchAll();
-return $searchArray;
+    //data照合
+    public function getUserTblByIdAndPass($shohin_id){
+        $pdo=$this->dbConnect();
+        $sql = "SELECT shohin_name FROM shohins WHERE shohin_id = ? ";
+        $ps=$pdo->prepare($sql);
+        $ps->bindValue(1, $shohin_id ,PDO::PARAM_STR);
+        $ps->execute();
+        $result=$ps->fetchAll();
+        return $result;
+    }
 }
-}
-
-
-
-
 
 ?>    
