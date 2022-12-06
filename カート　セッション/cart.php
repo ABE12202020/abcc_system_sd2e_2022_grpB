@@ -52,34 +52,6 @@
         <title>Hello, shoping!</title>
     </head>
     <body>
-    <nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #FF9933;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="../img/rogo b t.png" width="20%"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExample04">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><font size="5">トップ</font></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><font size="5">お気に入り</font></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><font size="5">殿堂入り</font></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><font size="5">ランキング</font></a>
-          </li>
-        </ul>
-        <form role="search">
-          <input class="form-control" type="search" placeholder="レシピを検索" aria-label="Search">
-        </form>
-      </div>
-    </div>
-  </nav>
     <div class="couneainer text-center">
 
     <div class="couneainer text-center">
@@ -121,8 +93,7 @@
         }
         echo "<div class = 'h3'>合計金額: ".number_format($gokei)."円</div>";
         ?>
-        <div><a href="shoping.php" class="h3">買い物を続ける</a></div> <br>
-        <button class="btn btn-warning btn-lg text-dark" type="button" onclick="location.href='../商品一覧試作/商品一覧試作.html'"><a href="../webフロントエンド/confirm.html">購入</a></button>
+        <div><a href="shoping.php" class="h3">買い物を続ける</a></div>
     </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </div>
