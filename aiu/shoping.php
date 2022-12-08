@@ -19,7 +19,6 @@
     
   </head>
   <body>
-
   <nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #FF9933;">
 		<div class="container-fluid">
 		  <a class="navbar-brand" href="#"><img src="../img/rogo_u.png" width="20%"></a>
@@ -71,15 +70,22 @@
       </strong> 
 <!-- 画像　名前　値段出力 -->
 <!-- <for文> -->
-<form><?php 
-for($i=0;$i<count($product);$i++){
+  <div class="row">
+<?php 
+for($i=0;$i<8;$i++){
+  ?>
+  <div class="col-md-3">
+<?php
 echo "<img src='".$product[$i]["img"]."' class='img-fluid rounded'>";
 echo "<h3>".$product[$i]["product_name"]."</h3>";
 echo "<span class='text-danger'>".number_format($product[$i]["price"])."円</span><br>";
-printf('<div class="col-md-3"><button formaction="%s">商品詳細</button></div>', $product[$i]["url"], $product[$i]["url"]);
+printf('<div class="col-md-12"><button formaction="%s">商品詳細</button></div>', $product[$i]["url"], $product[$i]["url"]);
 }
-?></form>
-
+?>
+</div>
+<?php
+      }
+?> 
 <!-- <div class="row p-1 gy-4"> -->
 
 
@@ -98,6 +104,9 @@ printf('<div class="col-md-3"><button formaction="%s">商品詳細</button></div
 <div class="col-md-3">
 <button type="submit" class="btn btn-primary">商　品　詳　細</button>
 </div> -->
+
+
+  
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </div>
