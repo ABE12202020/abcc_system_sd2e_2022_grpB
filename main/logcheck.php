@@ -18,6 +18,21 @@ if($getCnt>=1){
     // echo "	http://long-usa-8493.mond.jp/test/login_2.html";
 }
 
+class cart_id{
+    public function dbConnect(){
+        $pdo = new PDO('mysql:host=mysql208.phy.lolipop.lan; dbname=LAA1418543-bteam; charset=utf8',
+                        'LAA1418543', 'Baiueo1234');
+        return $pdo;
+    }
 
+    //cart_idにプラス１する
+        $pdo=$this->dbConnect();
+        $sql = "SELECT MAX(cart_id) FROM carts ";
+        $ps=$pdo->prepare($sql);
+        $ps->bindValue(1, $shohin_id ,PDO::PARAM_STR);
+        $ps->execute();
+        $result=$ps->fetchAll();
+        return $result;
+    //↓セレクトでの最大値に＋１してその値をセッションにいれる
 ?>
 

@@ -1,0 +1,13 @@
+cart_id、user_idは各画面セッションで共有する
+
+・データベース系の処理
+
+ログインしたらデータベースのcart_idを最大値＋１する
+
+「カートに入れる」を押したら
+セッションで共有されているcart_idと各画面のbuy_idをshohin_id、数量をshohin_quanityとしてcart_detailsにインサートする
+セッションで共有されているcart_idとuser_idをcartsにインサートする
+
+・フロント側の処理
+各画面のbuy_id（仮）とshohinsのshohin_idを比較して
+selectでbuy_idと同じshohin_idのshohin_name,shohin_price,shohin_ex,写真を

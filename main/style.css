@@ -1,0 +1,58 @@
+
+#maindiv{
+	margin-left:300px;
+	margin-right:auto;
+	padding-left:200px;
+}
+
+
+.logo{
+	text-align:center;
+	margin-bottom:20px;
+}
+
+.textimg{
+	text-align:center;
+}
+
+dt{
+	float:left;
+}
+
+dt::after{
+	content: ":"
+}
+
+#card{
+	text-align:left;
+}
+
+
+.btnspinner{
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.spinner_area input{
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    width: auto;
+    vertical-align: middle;
+    /* デフォルトのスピナーを消す */
+    -webkit-appearance: none;
+    -moz-appearance:textfield;
+}
+
+.spinner_area input[type="button"]{
+    cursor: pointer;
+}
+
+
+
+
+
