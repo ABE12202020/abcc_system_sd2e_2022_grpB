@@ -51,7 +51,7 @@ require "component.php";
 
       <div class="maindiv">
         <div class="textimg">
-          <img src="../img/ahi03-8.jpg" width="420" height="350" class="rounded">
+          <img src="../img/ahi-jo.png" width="420" height="350" class="rounded">
         </div>
           <div class="textimg text-align">
             <h1>具だくさんアヒージョ</h1>
@@ -128,11 +128,11 @@ require "component.php";
                   <option value=5>5</option>
               </select>
               <!-- <button type="submit" class="btn btn-primary"><a href="./shoping.php">カート</a></button>  -->
-              <button type="submit" class="btn btn-primary">カゴに入れる</button> 
+              <button type="submit" class="btn btn-warning">カゴに入れる</button>
           </form> 
         </div> 
                       <!-- <button class="btn btn-warning btn-lg text-white" type="button">カートに入れる</button><br> -->
-                      <!-- <a class="btn btn-Light btn-lg text-dark" href="../webフロントエンド/catalog.html" role="button">戻る</a> -->
+                      <a class="btn btn-Light btn-lg text-dark" href="../aiu/shoping.php" role="button">戻る</a>
                     </div>
                   </div>
                   <div class="col-2"></div>

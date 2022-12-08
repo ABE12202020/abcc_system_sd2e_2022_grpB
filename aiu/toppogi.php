@@ -1,8 +1,3 @@
-<?php
-require "component.php";
-  session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -52,15 +47,15 @@ require "component.php";
 
       <div class="maindiv">
         <div class="textimg">
-          <img src="../img/pide.png" width="420" height="350" class="rounded">
+          <img src="../img/toppogi.png" width="420" height="350" class="rounded">
         </div>
           <div class="textimg text-align">
-            <h1>牛肉と野菜のピデ</h1>
+            <h1>韓国棒餅の甘辛トッポギ</h1>
             <p>
                <br>
-               ●ピデとは、フルンと言われる窯で焼き上げた直径30㎝位の円形でふっくらもちもちとした食感のトルコで欠かせないパンの一つです。<br>
-               ●ピデの生地には砂糖が使われており、ほのかに甘く懐かしい味がします。<br>
-               ●素朴な味で、出来立て熱々のピデは一口食べたらやめられない！
+               ●トッポギとはトックと呼ばれるお餅をコチュジャンや砂糖を使って甘辛く煮混んだ韓国料理です。<br>
+               ●元々は宮廷料理ですが、近年の韓国では庶民料理として親しまれ、屋台の定番メニューとなっています。<br>
+               ●トッポギのアレンジレシピもたくさんありいろんな食べ方で楽しめます!
                <br>
             </p>
 
@@ -76,9 +71,9 @@ require "component.php";
                       <h5 class="card-title text-warning">商品情報<br>—————————————————————</h5>
                       <dl class="text-dark text-left">
                         <dt>内容量</dt><dd>330ml ／ 本<br>※48本セットにてお届けします</dd>
-                        <dt>原材料名</dt><dd>強力・薄力粉,砂糖,塩,水,肉,玉ねぎ,トマト,チリパウダー</dd>
+                        <dt>原材料名</dt><dd>お餅,コチュジャン,醤油,砂糖</dd>
                         <dt>保存方法</dt><dd>高温、直射日光を避けてください。</dd>
-                        <dt>原産国</dt><dd>トルコ</dd>
+                        <dt>原産国</dt><dd>韓国</dd>
                         <dt>輸入者の<br>名称及び住所</dt><dd>aso株式会社<br>東京都渋谷区恵比寿1-18-15</dd>
                         <dt>賞味期限</dt><dd>2023年8月19日</dd>
                       </dl>
@@ -94,7 +89,7 @@ require "component.php";
                         <dt>送料</dt><dd>550円／件<br> ※送料は商品ごとにかかります。<br> ※配送先によって送料が異なる可能性があります。</dd>
                         <dt>配送業者</dt><dd>佐川急便(沖縄県・離島のみヤマト運輸)</dd>
                         <dt>配送可能地域</dt><dd>全国</dd>
-                      </dl>
+                        </dl>
                       </div>
                   </div>
                 </div>
@@ -118,10 +113,10 @@ require "component.php";
                   <div class="col-2"></div>
                   <div class="col-8">
                     <div class="d-grid gap-2">
-                      <!-- <button class="btn btn-warning btn-lg text-white" type="button">カートに入れる</button><br> -->
-<!-- 中の数字変 -->
+
+                      <!-- 中の数字変 -->
             <form action="cart.php" class="mt-3" method="post">
-              <input type="hidden" name="product_name" value="<?= $product[0]["product_name"] ?>">
+              <input type="hidden" name="product_name" value="<?= $product[1]["product_name"] ?>">
               <select name="num">
                   <option value=1>1</option> 
                   <option value=2>2</option>
@@ -133,7 +128,7 @@ require "component.php";
               <button type="submit" class="btn btn-warning">カゴに入れる</button> 
           </form> 
         </div> 
-     
+                      <!-- <button class="btn btn-warning btn-lg text-white" type="button">カートに入れる</button><br> -->
                       <a class="btn btn-Light btn-lg text-dark" href="../aiu/shoping.php" role="button">戻る</a>
                     </div>
                   </div>
