@@ -58,7 +58,7 @@
                ●オイルはパンにつけてもおいしいです!<br>
             </p>
 
-
+            <form action="cart_test.php" method="post" name="form" >
             <div name="main" class="container">
               <div class="row">
 
@@ -92,6 +92,13 @@
                       </div>
                   </div>
                 </div>
+                <?php
+                require_once './cart_test.php';
+                $dbmg = new cart_test();
+                $buy_id='01';
+                $userList=$dbmg->getUserTblByIdAndPass($buy_id);
+
+                $dbmg->insert(1,1);
 
                 <div class="row m-1 mt-4">
                   <div class="col-md-4"></div>
@@ -112,7 +119,8 @@
                   <div class="col-2"></div>
                   <div class="col-8">
                     <div class="d-grid gap-2">
-                      <!-- <button class="btn btn-warning btn-lg text-white" type="button">カートに入れる</button><br> -->
+          
+                      <button class="btn btn-warning btn-lg text-white" type="button">カートに入れる</button><br>
                       <a class="btn btn-Light btn-lg text-dark" href="../webフロントエンド/catalog.html" role="button">戻る</a>
                     </div>
                   </div>
