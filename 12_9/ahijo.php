@@ -1,3 +1,7 @@
+<?php
+require "component.php";
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -25,16 +29,10 @@
       <div class="collapse navbar-collapse" id="navbarsExample04">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../webフロントエンド/catalog.html"><font size="5">トップ</font></a>
+            <a class="nav-link active" aria-current="page" href="./shoping.php"><font size="5">トップ</font></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><font size="5">お気に入り</font></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><font size="5">ランキング</font></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../webフロントエンド/login.html"><font size="5">ログイン</font></a>
           </li>
         </ul>
         <form role="search">
@@ -47,16 +45,15 @@
 
       <div class="maindiv">
         <div class="textimg">
-          <img src="../img/torukoice.png" width="420" height="350" class="rounded">
+          <img src="../img/ahi-jo.png" width="420" height="350" class="rounded">
         </div>
           <div class="textimg text-align">
-            <h1>のび～るトルコアイス</h1>
+            <h1>具だくさんアヒージョ</h1>
             <p>
                <br>
-               ●一般的なアイスクリームに似ているが、粘りがあることが特徴！<br>
-               ●「サーレップ」という植物の球根を粉末にしたものを使うことによってグルコマンナンと呼ばれる粘性のある成分が独特の粘りを出しています。<br>
-               ●観光地では民族衣装を着た店員がパフォーマンスを見せながら観光客にアイスを販売しています!
-               <br>
+               ●「アヒージョ」は、ニンニクで香りをつけたオリーブオイルを使い、具材を煮込んで作る料理です。<br>
+               ●シンプルな料理ながら美味しくお酒との相性も良いため、おつまみとしても高い人気を誇ります。<br>
+               ●オイルはパンにつけてもおいしいです!<br>
             </p>
 
 
@@ -70,10 +67,10 @@
                     <div class="card-body">
                       <h5 class="card-title text-warning">商品情報<br>—————————————————————</h5>
                       <dl class="text-dark text-left">
-                        <dt>内容量</dt><dd>550円／件<br> ※送料は商品ごとにかかります。<br> ※配送先によって送料が異なる可能性があります。</dd>
-                        <dt>原材料名</dt><dd>サーレップ,砂糖,羊乳</dd>
+                        <dt>内容量</dt><dd>330ml ／ 本<br>※48本セットにてお届けします</dd>
+                        <dt>原材料名</dt><dd>むきえび,マッシュルーム,ブロッコリー,にんにく,鷹の爪</dd>
                         <dt>保存方法</dt><dd>高温、直射日光を避けてください。</dd>
-                        <dt>原産国</dt><dd>トルコ</dd>
+                        <dt>原産国</dt><dd>スペイン</dd>
                         <dt>輸入者の<br>名称及び住所</dt><dd>aso株式会社<br>東京都渋谷区恵比寿1-18-15</dd>
                         <dt>賞味期限</dt><dd>2023年8月19日</dd>
                       </dl>
@@ -86,10 +83,10 @@
                       <div class="card-body">
                       <h5 class="card-title text-warning">配送について<br>—————————————————————</h5>
                       <dl class="text-dark text-left">
-                        <dt>送料</dt><dd>550円／件<br> ※送料は商品ごとにかかります。<br> ※配送先によって送料が異なる可能性があります。</dd>
-                        <dt>配送業者</dt><dd>佐川急便(沖縄県・離島のみヤマト運輸)</dd>
+                        <dt>送料</dt><dd>	550円／件<br> ※送料は商品ごとにかかります。<br> ※配送先によって送料が異なる可能性があります。</dd>
+                        <dt>配送業者</dt><dd>	佐川急便（沖縄県・離島のみヤマト運輸）</dd>
                         <dt>配送可能地域</dt><dd>全国</dd>
-                        </dl>
+                      </dl>
                       </div>
                   </div>
                 </div>
@@ -113,7 +110,7 @@
                   <div class="col-2"></div>
                   <div class="col-8">
                     <div class="d-grid gap-2">
-                      
+
                     <!-- 中の数字変 -->
             <form action="cart.php" class="mt-3" method="post">
               <input type="hidden" name="product_name" value="<?= $product[1]["product_name"] ?>">
@@ -125,7 +122,7 @@
                   <option value=5>5</option>
               </select>
               <!-- <button type="submit" class="btn btn-primary"><a href="./shoping.php">カート</a></button>  -->
-              <button type="submit" class="btn btn-warning">カゴに入れる</button> 
+              <button type="submit" class="btn btn-warning">カゴに入れる</button>
           </form> 
         </div> 
                       <!-- <button class="btn btn-warning btn-lg text-white" type="button">カートに入れる</button><br> -->

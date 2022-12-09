@@ -25,16 +25,10 @@
       <div class="collapse navbar-collapse" id="navbarsExample04">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../webフロントエンド/catalog.html"><font size="5">トップ</font></a>
+            <a class="nav-link active" aria-current="page" href="./shoping.php"><font size="5">トップ</font></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><font size="5">お気に入り</font></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><font size="5">ランキング</font></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../webフロントエンド/login.html"><font size="5">ログイン</font></a>
           </li>
         </ul>
         <form role="search">
@@ -47,15 +41,15 @@
 
       <div class="maindiv">
         <div class="textimg">
-          <img src="../img/toppogi.png" width="420" height="350" class="rounded">
+          <img src="../img/samugyo.png" width="420" height="350" class="rounded">
         </div>
           <div class="textimg text-align">
-            <h1>韓国棒餅の甘辛トッポギ</h1>
+            <h1>大人気の韓国料理！サムギョプサル</h1>
             <p>
                <br>
-               ●トッポギとはトックと呼ばれるお餅をコチュジャンや砂糖を使って甘辛く煮混んだ韓国料理です。<br>
-               ●元々は宮廷料理ですが、近年の韓国では庶民料理として親しまれ、屋台の定番メニューとなっています。<br>
-               ●トッポギのアレンジレシピもたくさんありいろんな食べ方で楽しめます!
+               ●スライスした豚のバラ肉を焼いて食べる韓国の豚バラ焼肉です。<br>
+               ●サムギョプサルは三枚肉のみに特化し、厚切り肉を味付けせずに焼くのが特徴！<br>
+               ●岩塩やゴマ油などをつけたり、青唐辛子のスライスなど一緒にサンチュやエゴマの葉などで巻いて食べます。
                <br>
             </p>
 
@@ -71,7 +65,7 @@
                       <h5 class="card-title text-warning">商品情報<br>—————————————————————</h5>
                       <dl class="text-dark text-left">
                         <dt>内容量</dt><dd>330ml ／ 本<br>※48本セットにてお届けします</dd>
-                        <dt>原材料名</dt><dd>お餅,コチュジャン,醤油,砂糖</dd>
+                        <dt>原材料名</dt><dd>豚バラ肉</dd>
                         <dt>保存方法</dt><dd>高温、直射日光を避けてください。</dd>
                         <dt>原産国</dt><dd>韓国</dd>
                         <dt>輸入者の<br>名称及び住所</dt><dd>aso株式会社<br>東京都渋谷区恵比寿1-18-15</dd>
@@ -89,7 +83,7 @@
                         <dt>送料</dt><dd>550円／件<br> ※送料は商品ごとにかかります。<br> ※配送先によって送料が異なる可能性があります。</dd>
                         <dt>配送業者</dt><dd>佐川急便(沖縄県・離島のみヤマト運輸)</dd>
                         <dt>配送可能地域</dt><dd>全国</dd>
-                        </dl>
+                      </dl>
                       </div>
                   </div>
                 </div>
@@ -113,8 +107,8 @@
                   <div class="col-2"></div>
                   <div class="col-8">
                     <div class="d-grid gap-2">
-
-                      <!-- 中の数字変 -->
+                      
+                    <!-- 中の数字変 -->
             <form action="cart.php" class="mt-3" method="post">
               <input type="hidden" name="product_name" value="<?= $product[1]["product_name"] ?>">
               <select name="num">

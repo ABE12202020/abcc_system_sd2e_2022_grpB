@@ -22,14 +22,24 @@ class cart_test{
         return $result;
     }
 
-    //datebase  Insert
+    //「カートに入れる」ボタンを押したときに、cart_detailsに書き込むメソッド
     public function insert($a,$b){
         $pdo=$this->dbConnect();
-        $sql= "INSERT INTO cart (cart_id , shohin_id , shohin_quanity) VALUES ('999' , ? ,'1')";
+        $sql= "INSERT INTO cart_details (cart_id , shohin_id , shohin_quanity) VALUES ('999' , ? ,'1')";
         $ps = $pdo->prepare($sql);
         // $ps->bindValue(1, $_POST[''] ,PDO::PARAM_STR);
         $ps->bindValue(2, $_POST['buy_id'] ,PDO::PARAM_STR);
         $ps->execute();
+    }
+    //カートに入れた商品データを出して、カート画面に出力するメソッド
+    public function cart_info(){
+        $pdo=$this->dbConnect();
+        $sql = "SELECT cart_id,shohin_id,shohin_quantity FROM cart_details WHERE cart_id = ? ";
+        $ps=$pdo->prepare($sql);
+        $ps->bindValue(1, $shohin_id ,PDO::PARAM_STR);
+        $ps->execute();
+        $result=$ps->fetchAll();
+        return $result;
     }
 }
 

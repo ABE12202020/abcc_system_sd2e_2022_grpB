@@ -17,7 +17,5 @@ if($getCnt>=1){
     exit;
     // echo "	http://long-usa-8493.mond.jp/test/login_2.html";
 }
-
-
 ?>
 

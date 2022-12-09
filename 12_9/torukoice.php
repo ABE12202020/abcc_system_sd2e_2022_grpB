@@ -25,16 +25,10 @@
       <div class="collapse navbar-collapse" id="navbarsExample04">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../webフロントエンド/catalog.html"><font size="5">トップ</font></a>
+            <a class="nav-link active" aria-current="page" href="./shoping.php"><font size="5">トップ</font></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><font size="5">お気に入り</font></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><font size="5">ランキング</font></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../webフロントエンド/login.html"><font size="5">ログイン</font></a>
           </li>
         </ul>
         <form role="search">
@@ -47,15 +41,15 @@
 
       <div class="maindiv">
         <div class="textimg">
-          <img src="../img/bibinba.png" width="420" height="350" class="rounded">
+          <img src="../img/torukoice.png" width="420" height="350" class="rounded">
         </div>
           <div class="textimg text-align">
-          <h1>野菜たっぷりビビンバ</h1>
+            <h1>のび～るトルコアイス</h1>
             <p>
                <br>
-               ●ビビンバは、韓国料理の一つ<br>
-               ●丼や専用容器にご飯とナムルや肉、卵等の具を入れ良くかき混ぜて食べる料理です。<br>
-               ●野菜や味付けナムルで栄養価満点!!
+               ●一般的なアイスクリームに似ているが、粘りがあることが特徴！<br>
+               ●「サーレップ」という植物の球根を粉末にしたものを使うことによってグルコマンナンと呼ばれる粘性のある成分が独特の粘りを出しています。<br>
+               ●観光地では民族衣装を着た店員がパフォーマンスを見せながら観光客にアイスを販売しています!
                <br>
             </p>
 
@@ -70,10 +64,10 @@
                     <div class="card-body">
                       <h5 class="card-title text-warning">商品情報<br>—————————————————————</h5>
                       <dl class="text-dark text-left">
-                      <dt>内容量</dt><dd>330ml ／ 本<br>※48本セットにてお届けします</dd>
-                        <dt>原材料名</dt><dd>ご飯,肉,醬油,砂糖,コチュジャン</dd>
+                        <dt>内容量</dt><dd>550円／件<br> ※送料は商品ごとにかかります。<br> ※配送先によって送料が異なる可能性があります。</dd>
+                        <dt>原材料名</dt><dd>サーレップ,砂糖,羊乳</dd>
                         <dt>保存方法</dt><dd>高温、直射日光を避けてください。</dd>
-                        <dt>原産国</dt><dd>韓国</dd>
+                        <dt>原産国</dt><dd>トルコ</dd>
                         <dt>輸入者の<br>名称及び住所</dt><dd>aso株式会社<br>東京都渋谷区恵比寿1-18-15</dd>
                         <dt>賞味期限</dt><dd>2023年8月19日</dd>
                       </dl>
@@ -88,8 +82,8 @@
                       <dl class="text-dark text-left">
                         <dt>送料</dt><dd>550円／件<br> ※送料は商品ごとにかかります。<br> ※配送先によって送料が異なる可能性があります。</dd>
                         <dt>配送業者</dt><dd>佐川急便(沖縄県・離島のみヤマト運輸)</dd>
-                        <dt>発送可能地域</dt><dd>全国</dd>
-                      </dl>
+                        <dt>配送可能地域</dt><dd>全国</dd>
+                        </dl>
                       </div>
                   </div>
                 </div>

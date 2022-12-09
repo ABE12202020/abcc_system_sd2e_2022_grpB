@@ -25,16 +25,10 @@
       <div class="collapse navbar-collapse" id="navbarsExample04">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../webフロントエンド/catalog.html"><font size="5">トップ</font></a>
+            <a class="nav-link active" aria-current="page" href="./shoping.php"><font size="5">トップ</font></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><font size="5">お気に入り</font></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><font size="5">ランキング</font></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../webフロントエンド/login.html"><font size="5">ログイン</font></a>
           </li>
         </ul>
         <form role="search">
@@ -47,15 +41,15 @@
 
       <div class="maindiv">
         <div class="textimg">
-          <img src="../img/paeria.png" width="420" height="350" class="rounded">
+          <img src="../img/toruty.png" width="420" height="350" class="rounded">
         </div>
           <div class="textimg text-align">
-            <h1>海の幸パエリア</h1>
+            <h1>本格！トルティージャ</h1>
             <p>
                <br>
-               ●パエリアはスペイン・バレンシア地方発祥の料理で、お米と野菜・魚介類・肉などをスープで炊いた料理です。<br>
-               ●使うお米は、「ジャバニカ米」という細長く粘り気の少ないお米が使われます。<br>
-               ●専用の平らな鍋を使って炊き上げるため、「おこげ」も楽しめるのが魅力的です。!
+               ●トルティージャは、スペインのオムレツのような卵料理を指す。<br>
+               ●一般のオムレツのように袋型にまとめる事をせず、フライパンの丸い形のまま焼き上げる。<br>
+               ●自分の好きな具材をいれてアレンジしてみてください!
                <br>
             </p>
 
@@ -70,8 +64,8 @@
                     <div class="card-body">
                       <h5 class="card-title text-warning">商品情報<br>—————————————————————</h5>
                       <dl class="text-dark text-left">
-                        <dt>内容量</dt><dd>330ml ／ 本<br>※48本セットにてお届けします</dd>
-                        <dt>原材料名</dt><dd>ムール貝・イカ・タコ・海老</dd>
+                        <dt>内容量</dt><dd>550円／件<br> ※送料は商品ごとにかかります。<br> ※配送先によって送料が異なる可能性があります。</dd>
+                        <dt>原材料名</dt><dd>卵,じゃがいも,玉ねぎ,にんにく</dd>
                         <dt>保存方法</dt><dd>高温、直射日光を避けてください。</dd>
                         <dt>原産国</dt><dd>スペイン</dd>
                         <dt>輸入者の<br>名称及び住所</dt><dd>aso株式会社<br>東京都渋谷区恵比寿1-18-15</dd>
@@ -89,7 +83,7 @@
                         <dt>送料</dt><dd>550円／件<br> ※送料は商品ごとにかかります。<br> ※配送先によって送料が異なる可能性があります。</dd>
                         <dt>配送業者</dt><dd>佐川急便(沖縄県・離島のみヤマト運輸)</dd>
                         <dt>配送可能地域</dt><dd>全国</dd>
-                      </dl>
+                        </dl>
                       </div>
                   </div>
                 </div>
