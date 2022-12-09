@@ -19,7 +19,7 @@
     
   </head>
   <body>
-  <nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #FF9933;">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top" aria-label="Fourth navbar example" style="background-color: #FF9933;">
 		<div class="container-fluid">
 		  <a class="navbar-brand" href="#"><img src="../img/rogo_u.png" width="20%"></a>
 		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,6 +33,9 @@
 			  </li>
 			  <li class="nav-item">
 				<a class="nav-link" href="#"><font size="5">お気に入り</font></a>
+			  </li>
+        <li class="nav-item">
+				<a class="nav-link" href="./login_complete.html"><font size="5">ログアウト</font></a>
 			  </li>
 			</ul>
 			<form role="search">
@@ -70,6 +73,23 @@
       </strong> 
 <!-- 画像　名前　値段出力 -->
 <!-- <for文> -->
+
+  <div class="row">
+<?php 
+for($i=0;$i<8;$i++){
+  ?>
+  <div class="col-md-3">
+<?php
+echo "<img src='".$product[$i]["img"]."' class='img-fluid rounded'>";
+echo "<h3>".$product[$i]["product_name"]."</h3>";
+echo "<span class='text-danger'>".number_format($product[$i]["price"])."円</span><br>";
+printf('<div class="col-md-12"><button formaction="%s">商品詳細</button></div>', $product[$i]["url"], $product[$i]["url"]);
+}
+?>
+</div>
+<?php
+      
+?> 
 
 <div class="row">
       <?php 
