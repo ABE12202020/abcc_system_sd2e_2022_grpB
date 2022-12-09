@@ -1,23 +1,13 @@
 <?php
   require "component.php";
   session_start();
-  class cart_id{
-    public function dbConnect(){
-        $pdo = new PDO('mysql:host=mysql208.phy.lolipop.lan; dbname=LAA1418543-bteam; charset=utf8',
-                        'LAA1418543', 'Baiueo1234');
-        return $pdo;
-    }
-
-    //cart_idにプラス１する
-        $pdo=$this->dbConnect();
-        $sql = "SELECT shohin_name FROM shohins WHERE shohin_id = ? ";
-        $ps=$pdo->prepare($sql);
-        $ps->bindValue(1, $shohin_id ,PDO::PARAM_STR);
-        $ps->execute();
-        $result=$ps->fetchAll();
-        return $result;
-    
+  echo $_SESSION['cart_id'];
+  $_SESSION['kiki']=9;
 ?>
+
+
+    
+
 <!doctype html>
 <html lang="ja">
   <head>
@@ -86,24 +76,6 @@
       </strong> 
 <!-- 画像　名前　値段出力 -->
 <!-- <for文> -->
-<<<<<<< HEAD
-  <div class="row">
-<?php 
-for($i=0;$i<8;$i++){
-  ?>
-  <div class="col-md-3">
-<?php
-echo "<img src='".$product[$i]["img"]."' class='img-fluid rounded'>";
-echo "<h3>".$product[$i]["product_name"]."</h3>";
-echo "<span class='text-danger'>".number_format($product[$i]["price"])."円</span><br>";
-printf('<div class="col-md-12"><button formaction="%s">商品詳細</button></div>', $product[$i]["url"], $product[$i]["url"]);
-}
-?>
-</div>
-<?php
-      }
-?> 
-=======
 <div class="row">
       <?php 
       for($i=0;$i<count($product);$i++){
@@ -114,14 +86,18 @@ printf('<div class="col-md-12"><button formaction="%s">商品詳細</button></di
               echo "<h3>".$product[$i]["product_name"]."</h3>";
               echo "<span class='text-danger'>".number_format($product[$i]["price"])."円</span><br>";
               $format = "<button formaction=%s class='btn btn-warning btn-lg text-white'>商品詳細</button>";
-              echo sprintf($format, $product[$i]["url"]);            
+              echo sprintf($format, $product[$i]["url"]);
+              echo $_SESSION['dami-'];
+              echo $_SESSION['kiki'];            
               ?></form>
           </div>
       <?php
       }
       ?>
-
->>>>>>> fbd76e480cb4f268a36dc1d3954dcb8fdec4e822
+      <?php
+      echo $_SESSION['cart_id'];
+      echo $_SESSION['dami-'];
+?>
 <!-- <div class="row p-1 gy-4"> -->
 
 
