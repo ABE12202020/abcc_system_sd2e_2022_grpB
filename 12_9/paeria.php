@@ -123,7 +123,7 @@
           </form> 
         </div> 
                       <!-- <button class="btn btn-warning btn-lg text-white" type="button">カートに入れる</button><br> -->
-                      <a class="btn btn-Light btn-lg text-dark" href="../aiu/shoping.php" role="button">戻る</a>
+                      <a class="btn btn-Light btn-lg text-dark" href="../12_9/shoping.php" role="button">戻る</a>
                     </div>
                   </div>
                   <div class="col-2"></div>

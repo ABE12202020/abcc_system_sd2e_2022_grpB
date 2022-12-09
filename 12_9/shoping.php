@@ -70,24 +70,7 @@
       </strong> 
 <!-- 画像　名前　値段出力 -->
 <!-- <for文> -->
-<<<<<<< HEAD
-  <div class="row">
-<?php 
-for($i=0;$i<8;$i++){
-  ?>
-  <div class="col-md-3">
-<?php
-echo "<img src='".$product[$i]["img"]."' class='img-fluid rounded'>";
-echo "<h3>".$product[$i]["product_name"]."</h3>";
-echo "<span class='text-danger'>".number_format($product[$i]["price"])."円</span><br>";
-printf('<div class="col-md-12"><button formaction="%s">商品詳細</button></div>', $product[$i]["url"], $product[$i]["url"]);
-}
-?>
-</div>
-<?php
-      
-?> 
-=======
+
 <div class="row">
       <?php 
       for($i=0;$i<count($product);$i++){
@@ -105,7 +88,6 @@ printf('<div class="col-md-12"><button formaction="%s">商品詳細</button></di
       }
       ?>
 
->>>>>>> fbd76e480cb4f268a36dc1d3954dcb8fdec4e822
 <!-- <div class="row p-1 gy-4"> -->
 
 
