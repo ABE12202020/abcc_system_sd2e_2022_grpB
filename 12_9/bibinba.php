@@ -30,6 +30,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#"><font size="5">お気に入り</font></a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./login_complete.html"><font size="5">ログアウト</font></a>
+          </li>
        </ul>
         <form role="search">
           <input class="form-control" type="search" placeholder="レシピを検索" aria-label="Search">
@@ -123,7 +126,7 @@
           </form> 
         </div> 
                       <!-- <button class="btn btn-warning btn-lg text-white" type="button">カートに入れる</button><br> -->
-                      <a class="btn btn-Light btn-lg text-dark" href="../aiu/shoping.php" role="button">戻る</a>
+                      <a class="btn btn-Light btn-lg text-dark" href="../12_9/shoping.php" role="button">戻る</a>
                     </div>
                   </div>
                   <div class="col-2"></div>

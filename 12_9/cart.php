@@ -67,6 +67,9 @@
 			  <li class="nav-item">
 				<a class="nav-link" href="#"><font size="5">お気に入り</font></a>
 			  </li>
+              <li class="nav-item">
+				<a class="nav-link" href="./login_complete.html"><font size="5">ログアウト</font></a>
+			  </li>
 			</ul>
 			<form role="search">
 			  <input class="form-control" type="search" placeholder="レシピを検索" aria-label="Search">

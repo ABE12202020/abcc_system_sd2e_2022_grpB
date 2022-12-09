@@ -47,7 +47,7 @@ require "component.php";
 
       <div class="maindiv">
         <div class="textimg">
-          <img src="../img/ahi-jo.png" width="420" height="350" class="rounded">
+          <img src="http://damp-tosu-9116.hippy.jp/main/ahijo.php" width="420" height="350" class="rounded">
         </div>
           <div class="textimg text-align">
             <h1>具だくさんアヒージョ</h1>
@@ -128,7 +128,7 @@ require "component.php";
           </form> 
         </div> 
                       <!-- <button class="btn btn-warning btn-lg text-white" type="button">カートに入れる</button><br> -->
-                      <a class="btn btn-Light btn-lg text-dark" href="../aiu/shoping.php" role="button">戻る</a>
+                      <a class="btn btn-Light btn-lg text-dark" href="http://damp-tosu-9116.hippy.jp/main/shoping.php" role="button">戻る</a>
                     </div>
                   </div>
                   <div class="col-2"></div>
