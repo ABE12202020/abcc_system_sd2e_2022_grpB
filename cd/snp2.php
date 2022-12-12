@@ -55,9 +55,9 @@ background-position: center 60%;
 		</div>
 	</div>
 
-    
-    
-        <?php
+	<div class="row p-1 gy-4">
+
+<?php
             $dsn = 'mysql:dbname=LAA1418543-bteam;host=mysql208.phy.lolipop.lan;charset=utf8';
             $user = 'LAA1418543';
             $password = 'Baiueo1234';
@@ -66,42 +66,28 @@ background-position: center 60%;
             $sql = 'SELECT * FROM shohins';
             $stmt = $dbh->prepare($sql);
             $stmt->execute();
-            // $stmt2=$stmt->fetchAll();
-			// session_start();
-            // $_SESSION['stmt3']=$stmt2;
-            ?>
-            <!-- <div name="maindiv" class="container"> -->
-		        <!-- <div class="row mt-5 gy-3">
-			        <div class="col-md-3"> -->
-            <!-- <div class="row">
-                <div class="col-lg-1"></div> -->
-                    <!-- <div class="col-xxl-3"> -->
-                    <!-- <div class="card">
-                        <div class="card-body">
-                        <dl class="text-dark text-left"> -->
-            <?php
+			
             foreach($stmt->fetchAll() as $row){
-            ?>
-            
-            <?php
-                $id=$row['shohin_id'];
-                // echo '<div class = "col-mdd-3 col-6 p-3">';
+                // echo '<div name="main" class="container">';
                 // echo '<div class="row">';
-                // echo '<div class="col-lg-3">';
-                echo '<a href="d.php?id='.$id.'"><img src="img/'.$row['picture_pass'].'"></a><br>';
-				//echo '<p><img src="./img/'.$row['picture_pass'].'"></p>';
-                echo '<a href = "d.php?id='.$id.'">'.$row['shohin_name'].'</a>';
-				//echo '<button "" class="btn btn-warning btn-lg text-white">商品詳細</button>'
-                // echo '</div>';
-                echo '<div class="row mt-5 gy-3">';
-			    echo '<div class="col-lg-3">';
-                echo '<div class="card"  style="width: 15rem; height: 15rem">';
+                // echo '<div class="col-lg-1"></div>';
+                echo '<div class="col-md-3">'; 
+                echo '<div class="card">'; 
                 echo '<div class="card-body">';
-                echo '<div class="column flex-direction:row">';
-                ?>
-            <?php
+                echo '<dl class="text-dark text-left">';
+                $id=$row['shohin_id'];
+                echo '<div class = "col-mdd-3 col-6 p-3">';
+                echo '<a href="d.php?id='.$id.'"><img src="./img/'.$row['picture_pass'].'"></a><br>';
+				//echo '<p><img src="./img/'.$row['picture_pass'].'"></p>';
+                echo '<p href = "d.php?id='.$id.'" style="text-align:center">'.$row['shohin_name'].'<p>';
+				echo '<button "" class="btn btn-warning btn-md-12 text-white" href="http://damp-tosu-9116.hippy.jp/d.php">商品詳細</button>';
+                echo '</div>';
+                echo '</dl>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
             }
-            ?>
+?>
 	
 	</div>
 	<!-- <a href="../shosai/shosai'.$row['shohin_id'].'.php">>>詳細へ</a> -->
