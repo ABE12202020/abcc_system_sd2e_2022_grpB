@@ -36,6 +36,7 @@ foreach($stmt->fetchAll() as $row) {
     echo '<form action="carttmp.php" method="post">'; 
     echo '<p>商品名:'.$row['shohin_name'].'</p>'; 
     echo '<p>価格:'.$row['shohin_price'].'</p>'; 
+    echo '<p>説明:'.$row['shohin_ex'].'</p>'; 
     echo '<p>個数:<select name="count">'; 
     for($i=1; $i<=10; $i++) {
         echo '<option value="'.$i.'">'.$i.'</option>';
@@ -45,6 +46,8 @@ foreach($stmt->fetchAll() as $row) {
     echo '<input type="hidden" name="name" value="'.$row['shohin_name'].'">'; 
     echo '<input type="hidden" name="price" value="'.$row['shohin_price'].'">'; 
     echo '<p><input type="submit" value="カートに追加"></p>';
+    echo '<a href="./catalog.php">戻る</a>'
+    //echo '<button formaction=catalog.php class='btn btn-warning btn-lg text-white'>商品詳細</button>';
     echo '</form>';
 }
 ?>
