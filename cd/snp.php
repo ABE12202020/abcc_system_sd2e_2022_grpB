@@ -55,9 +55,9 @@ background-position: center 60%;
 		</div>
 	</div>
 
-	<div class="row p-1 gy-4">
-
-<?php
+    
+    
+        <?php
             $dsn = 'mysql:dbname=LAA1418543-bteam;host=mysql208.phy.lolipop.lan;charset=utf8';
             $user = 'LAA1418543';
             $password = 'Baiueo1234';
@@ -66,18 +66,42 @@ background-position: center 60%;
             $sql = 'SELECT * FROM shohins';
             $stmt = $dbh->prepare($sql);
             $stmt->execute();
-			
+            // $stmt2=$stmt->fetchAll();
+			// session_start();
+            // $_SESSION['stmt3']=$stmt2;
+            ?>
+            <!-- <div name="maindiv" class="container"> -->
+		        <!-- <div class="row mt-5 gy-3">
+			        <div class="col-md-3"> -->
+            <!-- <div class="row">
+                <div class="col-lg-1"></div> -->
+                    <!-- <div class="col-xxl-3"> -->
+                    <!-- <div class="card">
+                        <div class="card-body">
+                        <dl class="text-dark text-left"> -->
+            <?php
             foreach($stmt->fetchAll() as $row){
+            ?>
+            
+            <?php
                 $id=$row['shohin_id'];
-                echo '<div class = "col-mdd-3 col-6 p-3">';
-				
+                // echo '<div class = "col-mdd-3 col-6 p-3">';
+                // echo '<div class="row">';
+                // echo '<div class="col-lg-3">';
+                echo '<div class="row mt-5 gy-3">';
+			    echo '<div class="col-lg-3">';
+                echo '<div class="card-columns">';
+                echo '<div class="card-body">';
+                echo '<div class="column flex-direction:row">';
                 echo '<a href="d.php?id='.$id.'"><img src="img/'.$row['picture_pass'].'"></a><br>';
 				//echo '<p><img src="./img/'.$row['picture_pass'].'"></p>';
                 echo '<a href = "d.php?id='.$id.'">'.$row['shohin_name'].'</a>';
 				//echo '<button "" class="btn btn-warning btn-lg text-white">商品詳細</button>'
-                echo '</div>';
+                // echo '</div>';
+                ?>
+            <?php
             }
-?>
+            ?>
 	
 	</div>
 	<!-- <a href="../shosai/shosai'.$row['shohin_id'].'.php">>>詳細へ</a> -->
