@@ -8,13 +8,15 @@
         $ps=$pdo->prepare($sql);
         $ps->bindValue(1,$userid2,PDO::PARAM_STR);
         $ps->execute();
-
+?>
+<?php
         $sql2 = "SELECT MAX(cart_id) FROM carts";
-        $ps=$pdo->prepare($sql2);
-        $ps->execute();
-        $cart_id2=$ps->fetchAll();
+        $ps2=$pdo->prepare($sql2);
+        $ps2->execute();
+        $cart_id2=$ps2->fetch();
+        $cart_id3=$cart_id2['0'];
         session_start();
-        $_SESSION['cart_id']=$cart_id2;
+        $_SESSION['cart_id']=$cart_id3;
         $_SESSION['dami-']=3;
    //cart_idをセッションに入れたい
 
