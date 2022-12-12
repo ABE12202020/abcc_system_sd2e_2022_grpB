@@ -65,12 +65,14 @@ background-position: center 60%;
             $sql = 'SELECT * FROM shohins';
             $stmt = $dbh->prepare($sql);
             $stmt->execute();
+			
             foreach($stmt->fetchAll() as $row){
                 $id=$row['shohin_id'];
-                echo '<div class = "col-mdd-3 col-6 alert-success p-3">';
-                //echo '<a href = "d.php?id='.$id.'"><img src"img/'.$row['picture_pass'].'"></a>';
-				echo '<p><img src="./img/'.$row['picture_pass'].'"></p>';
+                echo '<div class = "col-mdd-3 col-6 p-3">';
+                echo '<a href="d.php?id='.$id.'"><img src="img/'.$row['picture_pass'].'"></a><br>';
+				//echo '<p><img src="./img/'.$row['picture_pass'].'"></p>';
                 echo '<a href = "d.php?id='.$id.'">'.$row['shohin_name'].'</a>';
+				//echo '<button "" class="btn btn-warning btn-lg text-white">商品詳細</button>'
                 echo '</div>';
             }
 ?>
