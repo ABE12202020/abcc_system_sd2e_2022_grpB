@@ -56,6 +56,7 @@ background-position: center 60%;
 	</div>
 
 	<div class="row p-1 gy-4">
+
 <?php
             $dsn = 'mysql:dbname=LAA1418543-bteam;host=mysql208.phy.lolipop.lan;charset=utf8';
             $user = 'LAA1418543';
@@ -69,6 +70,7 @@ background-position: center 60%;
             foreach($stmt->fetchAll() as $row){
                 $id=$row['shohin_id'];
                 echo '<div class = "col-mdd-3 col-6 p-3">';
+				
                 echo '<a href="d.php?id='.$id.'"><img src="img/'.$row['picture_pass'].'"></a><br>';
 				//echo '<p><img src="./img/'.$row['picture_pass'].'"></p>';
                 echo '<a href = "d.php?id='.$id.'">'.$row['shohin_name'].'</a>';
