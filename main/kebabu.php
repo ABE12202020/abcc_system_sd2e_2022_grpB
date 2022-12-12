@@ -1,5 +1,5 @@
 <?php
-  $buy_id=03;
+  $buy_id="03";
 ?>
 <!DOCTYPE html>
 <html>
@@ -114,7 +114,9 @@
                       
                     <!-- 中の数字変 -->
             <form action="cart.php" class="mt-3" method="post">
+            <input type="hidden" id="id" name="shohin_id" value="02">
               <input type="hidden" name="product_name" value="<?= $product[1]["product_name"] ?>">
+
               <select name="num">
                   <option value=1>1</option> 
                   <option value=2>2</option>
@@ -123,8 +125,30 @@
                   <option value=5>5</option>
               </select>
               <!-- <button type="submit" class="btn btn-primary"><a href="./shoping.php">カート</a></button>  -->
-              <button type="submit" class="btn btn-warning">カゴに入れる</button> 
+              <input type="submit" class="btn btn-warning" value="カゴに入れる"> 
           </form> 
+          <?php
+          if(isset($_POST['add'])){
+            $pdo = new PDO('mysql:host=mysql208.phy.lolipop.lan; dbname=LAA1418543-bteam; charset=utf8',
+                            'LAA1418543', 'Baiueo1234');
+              //cart_idをautoincriしてuser_idと紐づけcartsにインサート
+                    $userid2=(String)$_POST['userid'];
+
+                    // $sql = "INSERT INTO `cart_details`(`cart_id`,`shohin_id`,`shohin_quanity`) VALUES (?,?,?)";
+                    // $ps=$pdo->prepare($sql);
+                    // $ps->bindValue(1,$_SESSION['cart_id'],PDO::PARAM_INT);
+                    // $ps->bindValue(2,$buy_id,PDO::PARAM_STR);
+                    // $ps->bindValue(3,$_POST['num'],PDO::PARAM_INT);
+                    // $ps->execute();
+                    
+                    $sql = "INSERT INTO `cart_details`(`cart_id`,`shohin_id`,`shohin_quanity`) VALUES (2,?,3)";
+                    $ps=$pdo->prepare($sql);
+                    // $ps->bindValue(1,$_SESSION['cart_id'],PDO::PARAM_INT);
+                    $ps->bindValue(2,$buy_id,PDO::PARAM_STR);
+                    // $ps->bindValue(3,$num,PDO::PARAM_INT);
+                    $ps->execute();
+            }
+            ?>
         </div> 
                       <!-- <button class="btn btn-warning btn-lg text-white" type="button">カートに入れる</button><br> -->
                       <a class="btn btn-Light btn-lg text-dark" href="../aiu/shoping.php" role="button">戻る</a>
