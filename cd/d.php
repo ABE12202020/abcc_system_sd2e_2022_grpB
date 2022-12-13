@@ -53,7 +53,7 @@ foreach($stmt->fetchAll() as $row) {
     echo '<img src="../img/'.$row['picture_pass'].'" width="420" height="350" class="rounded">';
     //echo '<p><img src="./img/'.$row['picture_pass'].'"></p>'; 
   //--------------------------------------------------------------------  
-    echo '<form action="carttmp.php" method="post">';  
+    echo '<form action="./cart.php" method="post">';  
   //商品名:
     echo '<p><h1 style="text-align:center">'.$row['shohin_name'].'</h1></p>';
     //echo '<p><h1>'.$row['shohin_name'].'</h1></p>'; 
