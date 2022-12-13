@@ -82,6 +82,7 @@ background-position: center 60%;
 				//echo '<p><img src="./img/'.$row['picture_pass'].'"></p>';
 				//echo '<a href = "d.php?id='.$id.'">'.$row['shohin_name'].'</a>';
                 echo '<a href = "d.php?id='.$id.'" style="text-align:center">'.$row['shohin_name'].'<a>';
+				echo '<button class="btn btn-warning btn-col-mdd-10 col-12 p-10 text-white text-center" >商品詳細</button>';
 				// echo '<button "" class="btn btn-warning btn-md-12 text-white" href="http://damp-tosu-9116.hippy.jp/d.php">商品詳細</button>';
                 echo '</div>';
                 echo '</dl>';
