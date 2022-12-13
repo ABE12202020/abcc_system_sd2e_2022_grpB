@@ -77,7 +77,7 @@ background-position: center 60%;
                 echo '<div class="card-body">';
                 echo '<dl class="text-dark text-left">';
                 echo '<div class = "col-mdd-10 col-12 p-10">';
-                echo '<a href="d.php?id='.$id.'"><img src="./img/'.$row['picture_pass'].'"width="250" height="250" class="rounded"></a><br>';
+                echo '<div style="text-align: center;"><img src="./img/'.$row['picture_pass'].'"width="320" height="320" class="card-img-top"></a><br>';
 				//echo '<img src="./img/'.$row['picture_pass'].'" width="420" height="350" class="rounded">';
 				//echo '<p><img src="./img/'.$row['picture_pass'].'"></p>';
 				//echo '<a href = "d.php?id='.$id.'">'.$row['shohin_name'].'</a>';
