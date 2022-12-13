@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="css/style.css"rel="stylesheet"type="text/css">
+    <!-- <link href="css/style.css"rel="stylesheet"type="text/css"> -->
 
     <title>商品詳細</title>
   </head>
@@ -33,14 +33,8 @@
     </div>
   </nav>
   <br>
+
 <?php
-    //lolipop
-		// $pdo = new PDO('mysql:host=mysql208.phy.lolipop.lan; dbname=LAA1418543-bteam; charset=utf8',
-		// 					'LAA1418543', 'Baiueo1234'); 
-
-    // $pdo = new PDO('mysql:host=mysql208.phy.lolipop.lan; dbname=LAA1418543-bteam; charset=utf8',
-    // 'LAA1418543', 'Baiueo1234');
-
 //db接続
 $dsn = 'mysql:dbname=LAA1418543-bteam;host=mysql208.phy.lolipop.lan;charset=utf8';
 $user = 'LAA1418543';
@@ -52,13 +46,51 @@ $stmt=$dbh->prepare($sql);
 $stmt->execute([$_REQUEST['id']]);
 
 foreach($stmt->fetchAll() as $row) {
-    echo '<p><img src="./img/'.$row['picture_pass'].'"></p>'; 
-    echo '<form action="carttmp.php" method="post">'; 
-    //echo '<p>商品番号:', $row['id'], '</p>'; 
-    echo '<p>商品名:'.$row['shohin_name'].'</p>'; 
+  echo '<div style="text-align:center;">';
+  //名前ok
+    //echo '<div class="textimg">';//center
+    echo '<img src="./img/'.$row['picture_pass'].'" width="420" height="350" class="rounded">';
+    //echo '<p><img src="./img/'.$row['picture_pass'].'"></p>'; 
+  //--------------------------------------------------------------------  
+    echo '<form action="carttmp.php" method="post">';  
+  //商品名:
+    echo '<p><h1 style="text-align:center">'.$row['shohin_name'].'</h1></p>';
+    //echo '<p><h1>'.$row['shohin_name'].'</h1></p>'; 
+  //------------------------------------------------------------------------
     echo '<p>価格:'.$row['shohin_price'].'</p>'; 
+  //商品情報
+
+    echo '<div name="main" class="container">';
+    echo '<div class="row">';
+    echo '<div class="col-lg-1"></div>';
+    echo '<div class="col-lg-5">'; 
+    echo '<div class="card">'; 
+    echo '<div class="card-body">';
+    echo '<h5 class="card-title text-warning">商品情報<br>—————————————————————</h5>';
+    echo '<dl class="text-dark text-left">';
     echo '<p>説明:<br>'.$row['shohin_ex'].'</p>'; 
-    echo '<p>個数:<select name="count">'; 
+    echo '</dl>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+  //--------------------------------------------------------------------
+  //配送
+    echo '<div class="col-lg-5">'; 
+    echo '<div class="card">'; 
+    echo '<div class="card-body">';
+    echo '<h5 class="card-title text-warning">配送について<br>—————————————————————</h5>';
+    echo '<dl class="text-dark text-left">';
+    echo '<dt>送料</dt><dd>	値段／件<br> ※送料は商品ごとにかかります。<br> ※配送先によって送料が異なる可能性があります。</dd>
+          <dt>配送業者</dt><dd>	佐川急便（沖縄県・離島のみヤマト運輸）</dd>
+          <dt>配送可能地域</dt><dd>全国</dd>';
+    echo '</dl>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    //echo '</div>';//center
+  //----------------------------------------------------------------------
+    echo '<p>個数:<select name="count">';
+    echo  '</div>';
     for($i=1; $i<=10; $i++) {
         echo '<option value="'.$i.'">'.$i.'</option>';
 }
@@ -70,20 +102,10 @@ foreach($stmt->fetchAll() as $row) {
     echo '<p><input type="submit" value="カートに追加"></p>';
     echo '</form>';
 }
-
 echo '<a href="http://fancy-naha-9512.noor.jp/catalog.php">戻る</a>'
 ?>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>
+
 

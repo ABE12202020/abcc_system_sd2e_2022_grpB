@@ -1,44 +1,141 @@
 <?php
     require "component.php";
     session_start();
+    $_SESSION['cart_id'];
+$buy_id="01";
+$pdo = new PDO('mysql:host=mysql208.phy.lolipop.lan; dbname=LAA1418543-bteam; charset=utf8',
+                            'LAA1418543', 'Baiueo1234');
+        $shohin_id2=(String)$_POST['shohin_id'];
 
-    //買い物カゴが空ではないとき
-    if(isset($_SESSION["cart"])){
-        $array=$_SESSION["cart"];
-        //商品の追加
-        //商品と数量がPOSTされたとき
-        if(isset($_POST["product_name"]) && isset($_POST["num"]) ){
-            $array_product_name = array_column($array,"product_name");
-            //既に買い物かごに入っているのと、同じ商品がかごに入ったとき
-            if(in_array($_POST["product_name"],$array_product_name)){
-                $index = array_search($_POST["product_name"], $array_product_name);
-                $array[$index]["num"] += $_POST["num"];
-            //異なる商品がかごに入ったとき
-            }else{
-                $array[] = [
-                    "product_name" => $_POST["product_name"],
-                    "num" => $_POST["num"]
-                ];
-            }
-        }
+        // $sql = "INSERT INTO `cart_details`(`cart_id`,`shohin_id`,`shohin_quanity`) VALUES (?,?,?)";
+        // $ps=$pdo->prepare($sql);
+        // $ps->bindValue(1,$_SESSION['cart_id'],PDO::PARAM_INT);
+        // $ps->bindValue(2,$buy_id,PDO::PARAM_STR);
+        // $ps->bindValue(3,$_POST['num'],PDO::PARAM_INT);
+        // $ps->execute();
+                    
+        $sql = "INSERT INTO `cart_details`(`cart_id`,`shohin_id`,`shohin_quanity`) VALUES (2,?,3)";
+        $ps=$pdo->prepare($sql);
+        // $ps->bindValue(1,$_SESSION['cart_id'],PDO::PARAM_INT);
+        $ps->bindValue(1,$shohin_id2,PDO::PARAM_STR);
+        // $ps->bindValue(3,$num,PDO::PARAM_INT);
+        $ps->execute();
+
+
+
+        $sql2 = "SELECT MAX(cart_id) FROM cart_details";
+        $ps2=$pdo->prepare($sql2);
+        $ps2->execute();
+        $cart_details_id2=$ps2->fetch();
+        $cart_details_id3=$cart_id2['0'];
+
+        //画像のパスを$pic_passに入れるselect文
+        
+        $sql3 = "SELECT `picture_pass` FROM `shohins` WHERE shohin_id = ?";
+        $ps3=$pdo->prepare($sql3);
+        $ps3->bindValue(1,$buy_id,PDO::PARAM_STR);
+        $ps3->execute();
+        $pic_pass3=$ps3->fetch();
+        $pic_pass4=$pic_pass3['0'];
+    
+        //商品の名前を出そう
+        $sql4 = "SELECT `shohin_name` FROM `shohins` WHERE shohin_id = ?";
+        $ps4=$pdo->prepare($sql4);
+        $ps4->bindValue(1,$buy_id,PDO::PARAM_STR);
+        $ps4->execute();
+        $shohin_name2=$ps4->fetch();
+        $shohin_name3=$shohin_name2['0'];
+        
+        //商品の個数を出そう
+        $sql5 = "SELECT `shohin_quanity` FROM `cart_details` WHERE shohin_id = ? and cart_id = 2";
+        $ps5=$pdo->prepare($sql5);
+        $ps5->bindValue(1,$buy_id,PDO::PARAM_STR);
+        // $ps5->bindValue(1,$_SESSION['cart_id'],PDO::PARAM_INT);
+        $ps5->execute();
+        $kosu2=$ps5->fetch();
+        $kosu=$kosu2['0'];
+
+    //買い物カゴが空ではないとき(cartsとcart_detailsのmaxのcart_idを比較して同じだったら空じゃない)
+    if($_SESSION['cart_id']==$cart_details_id3){
+
+echo '<div class="col-sm-4 col-xs-6">';
+ echo '<div class="card itiran-card-margin" style="height: 550px; margin-bottom:20px;">';
+ echo '<img class="card-img-top itiran-photo-size" src="../img/' . $pic_pass4 . '">';
+ echo '<div class="card-body">';
+//  echo '<form action="./syosai.php" method="post" name="a_form' . ($cart_device_id[$i] + 1) . '">';
+//  echo '<input type="hidden" name="device" value="' . ($cart_device_id[$i] + 1) . '">';
+//  echo '<a href="javascript:a_form' . ($cart_device_id[$i] + 1) . '.submit();" style="text-decoration:none;">';
+ echo '<p class="card-title text-height" style="flex-grow: 1;">';
+ echo $shohin_name3;
+ echo '</p>';
+ echo '<p>';
+//  echo '<span class="star5_rating" data-rate="' . $deviceEvaluationValues[$cart_device_id[$i]] . '"></span>';
+ echo '<span style="margin-left: 10px;">' . number_format($kosu) . '</span>';
+
+
+echo '</p>';
+ echo '<span class="text-danger">';
+ echo "￥" . number_format($price);
+ echo '</span>';
+ echo '</a>';
+ echo '</form>';
+ echo '</div>';
+ echo '</div>';
+ echo '<span class="text-black">';
+ echo "数量：";
+ // echo $cart_quantity[$i];
+ echo $hoge = $dbmng->deviceQuantitySearch($cart_device_id[$i] + 1,$_SESSION['cart_id']);
+ echo '</span>';
+ echo '<span>';
+ echo '<form action="./ka-to.php" method="post">';
+ echo '<input type="hidden" name="deleteDevice" value="';
+ echo $cart_device_id[$i];
+ echo '">';
+ echo '<input class="btn btn-warning btn-lg text-dark" type="submit" value="削除">';
+ echo '</form>';
+ echo '</span>';
+ echo '</div>';
+
+ $gokei += $price * $hoge;
+}
+
+
+
+        // $array=$_SESSION["cart"];
+        // //商品の追加
+        // //商品と数量がPOSTされたとき
+        // if(isset($_POST["product_name"]) && isset($_POST["num"]) ){
+        //     $array_product_name = array_column($array,"product_name");
+        //     //既に買い物かごに入っているのと、同じ商品がかごに入ったとき
+        //     if(in_array($_POST["product_name"],$array_product_name)){
+        //         $index = array_search($_POST["product_name"], $array_product_name);
+        //         $array[$index]["num"] += $_POST["num"];
+        //     //異なる商品がかごに入ったとき
+        //     }else{
+        //         $array[] = [
+        //             "product_name" => $_POST["product_name"],
+        //             "num" => $_POST["num"]
+        //         ];
+        //     }
+        // }
             //商品の削除
             //商品名だけがPOSTされたとき
-            if(isset($_POST["product_name"]) && !isset($_POST["num"]) ){
-                $array_product_name = array_column($array,"product_name");
-                //商品を削除る
-                if(in_array($_POST["product_name"],$array_product_name)){
-                    $index = array_search($_POST["product_name"],$array_product_name);
-                    unset($array[$index]);
-                    $array = array_values($array);
-                }
-            }
-            //買い物かごに初めて商品をいれるとき
-        }else{
-            $array[] = [
-                "product_name" => $_POST["product_name"],
-                "num" => $_POST["num"]
-            ];
-        }
+        //     if(isset($_POST["product_name"]) && !isset($_POST["num"]) ){
+        //         $array_product_name = array_column($array,"product_name");
+        //         //商品を削除る
+        //         if(in_array($_POST["product_name"],$array_product_name)){
+        //             $index = array_search($_POST["product_name"],$array_product_name);
+        //             unset($array[$index]);
+        //             $array = array_values($array);
+        //         }
+        //     }
+        //     //買い物かごに初めて商品をいれるとき
+        // }else{
+        //     $array[] = [
+        //         "product_name" => $_POST["product_name"],
+        //         "num" => $_POST["num"]
+        //     ];
+        // }
 
         //配列セッションに格納
         $_SESSION["cart"] = $array;
