@@ -23,7 +23,7 @@
             <a class="nav-link active" aria-current="page" href="../webフロントエンド/catalog.html"><font size="5">トップ</font></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../webフロントエンド/login.html"><font size="5">ログアウト</font></a>
+            <a class="nav-link" href="login_complete.html"><font size="5">ログアウト</font></a>
           </li>
         </ul>
         <form role="search">
