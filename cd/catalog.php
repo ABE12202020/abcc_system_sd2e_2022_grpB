@@ -21,7 +21,7 @@ background-position: center 60%;
 
 	<nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #FF9933;">
 		<div class="container-fluid">
-		  <a class="navbar-brand" href="#"><img src="../img/rogo b t.png" width="20%"></a>
+		  <a class="navbar-brand" href="#"><img src="../img/rogo_u.png" width="20%"></a>
 		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		  </button>
@@ -45,7 +45,7 @@ background-position: center 60%;
 <div name="maindiv" class="container-fluids">
 	<div class="bg-img p-5">
 		<div class="container">
-			<img src="../img/rogo b t.png" class="img-fluid" width="30%">
+			<img src="../img/rogo_u.png" class="img-fluid" width="30%">
 			<p class="text-white text-center"><br></p>
 		</div>
 	</div>
@@ -68,13 +68,26 @@ background-position: center 60%;
             $stmt->execute();
 			
             foreach($stmt->fetchAll() as $row){
-                $id=$row['shohin_id'];
-                echo '<div class = "col-mdd-3 col-6 p-3">';
-				
-                echo '<a href="d.php?id='.$id.'"><img src="img/'.$row['picture_pass'].'"></a><br>';
+				$id=$row['shohin_id'];
+                // echo '<div name="main" class="container">';
+                // echo '<div class="row">';
+                // echo '<div class="col-lg-1"></div>';
+                echo '<div class="col-md-3">'; 
+                echo '<div class="card">'; 
+                echo '<div class="card-body">';
+                echo '<dl class="text-dark text-left">';
+                echo '<div class = "col-mdd-10 col-12 p-10">';
+                echo '<a href="d.php?id='.$id.'"><img src="./img/'.$row['picture_pass'].'"width="250" height="250" class="rounded"></a><br>';
+				//echo '<img src="./img/'.$row['picture_pass'].'" width="420" height="350" class="rounded">';
 				//echo '<p><img src="./img/'.$row['picture_pass'].'"></p>';
-                echo '<a href = "d.php?id='.$id.'">'.$row['shohin_name'].'</a>';
-				//echo '<button "" class="btn btn-warning btn-lg text-white">商品詳細</button>'
+				//echo '<a href = "d.php?id='.$id.'">'.$row['shohin_name'].'</a>';
+                echo '<h1 href = "d.php?id='.$id.'" style="text-align:center">'.$row['shohin_name'].'</h1>';
+				echo '<a href="d.php?id='.$id.'"><button class="btn btn-warning btn-col-mdd-10 col-12 p-10 text-white text-center" >商品詳細</button>';
+				// echo '<button "" class="btn btn-warning btn-md-12 text-white" href="http://damp-tosu-9116.hippy.jp/d.php">商品詳細</button>';
+                echo '</div>';
+                echo '</dl>';
+                echo '</div>';
+                echo '</div>';
                 echo '</div>';
             }
 ?>
