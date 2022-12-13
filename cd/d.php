@@ -58,7 +58,7 @@ foreach($stmt->fetchAll() as $row) {
     echo '<p><h1 style="text-align:center">'.$row['shohin_name'].'</h1></p>';
     //echo '<p><h1>'.$row['shohin_name'].'</h1></p>'; 
   //------------------------------------------------------------------------
-    echo '<p>価格:'.$row['shohin_price'].'</p>'; 
+    echo '<p>価格:'.$row['shohin_price'].'円</p>'; 
   //商品情報
 
     echo '<div name="main" class="container">';
@@ -103,10 +103,14 @@ foreach($stmt->fetchAll() as $row) {
     echo '<p><input type="submit" value="カートに追加"></p>';
     echo '</form>';
 }
+<<<<<<< HEAD
+echo '<a href="http://damp-tosu-9116.hippy.jp/catalog.php">戻る</a>'
+=======
 session_start();
 $_SESSION['buy_id']=$_REQUEST['id'];
 $_SESSION['kosu']=$count;
 echo '<a href="http://fancy-naha-9512.noor.jp/catalog.php">戻る</a>'
+>>>>>>> 802b8021723046af278f0486cf3cbe61119288cd
 ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
