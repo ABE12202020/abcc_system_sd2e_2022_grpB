@@ -77,7 +77,7 @@ background-position: center 60%;
                 echo '<dl class="text-dark text-left">';
                 $id=$row['shohin_id'];
                 echo '<div class = "col-mdd-10 col-12 p-10">';
-                echo '<a href="d.php?id='.$id.'"><img src="./img/'.$row['picture_pass'].'" width="300" height="200"></a><br>';
+                echo '<a href="d.php?id='.$id.'"><img src="../img/'.$row['picture_pass'].'" width="300" height="200"></a><br>';
 				//echo '<p><img src="./img/'.$row['picture_pass'].'"></p>';
                 echo '<h1 href = "d.php?id='.$id.'" style="text-align:center">'.$row['shohin_name'].'</h1>';
 				echo '<button class="btn btn-warning btn-col-mdd-10 col-12 p-10 text-white text-center" >商品詳細</button>';
