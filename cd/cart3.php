@@ -1,4 +1,5 @@
 <?php
+session_start();
 $pdo = new PDO(
     'mysql:host=mysql208.phy.lolipop.lan; dbname=LAA1418543-bteam; charset=utf8',
     'LAA1418543',
@@ -9,13 +10,13 @@ $shohin_id2 = (string)$_POST['shohin_id'];
 $sql9 = "SELECT COUNT( `cart_id` )FROM `cart_details`GROUP BY `cart_id` HAVING MAX( `cart_id` ) ORDER BY `cart_id` DESC";
 $ps9 = $pdo9->prepare($sql9);
 $ps9->execute();
-$cart_derail_count2 = $ps9->fetch();
-$cart_derail_count = $cart_derail_count2['0'];
+$cart_detail_count2 = $ps9->fetch();
+$cart_detail_count = $cart_detail_count2['0'];
 
 $sql = "INSERT INTO `cart_details`(`cart_id`,`shohin_id`,`shohin_quanity`) VALUES (?,?,?)";
 $ps = $pdo->prepare($sql);
 $ps->bindValue(1, $_SESSION['cart_id'], PDO::PARAM_INT);
-$ps->bindValue(2, $_SESSTION['buy_id'], PDO::PARAM_STR);
+$ps->bindValue(2, $_SESSION['buy_id'], PDO::PARAM_STR);
 $ps->bindValue(3, $_SESSION['kosu'], PDO::PARAM_INT);
 $ps->execute();
 
@@ -31,7 +32,7 @@ $cart_details_id3 = $cart_details_id2['0'];
 
 $sql3 = "SELECT `picture_pass` FROM `shohins` WHERE shohin_id = ?";
 $ps3 = $pdo->prepare($sql3);
-$ps3->bindValue(1, $_SESSTION['buy_id'], PDO::PARAM_STR);
+$ps3->bindValue(1, $_SESSION['buy_id'], PDO::PARAM_STR);
 $ps3->execute();
 $pic_pass3 = $ps3->fetch();
 $pic_pass4 = $pic_pass3['0'];
@@ -39,15 +40,16 @@ $pic_pass4 = $pic_pass3['0'];
 //商品の名前を出そう
 $sql4 = "SELECT `shohin_name` FROM `shohins` WHERE shohin_id = ?";
 $ps4 = $pdo->prepare($sql4);
-$ps4->bindValue(1, $_SESSTION['buy_id'], PDO::PARAM_STR);
+$ps4->bindValue(1, $_SESSION['buy_id'], PDO::PARAM_STR);
 $ps4->execute();
 $shohin_name2 = $ps4->fetch();
 $shohin_name3 = $shohin_name2['0'];
 
 //商品の個数を出そう
-$sql5 = "SELECT `shohin_quanity` FROM `cart_details` WHERE shohin_id = ? and cart_id = 2";
+$sql5 = "SELECT `shohin_quanity` FROM `cart_details` WHERE shohin_id = ? and cart_id = ?";
 $ps5 = $pdo->prepare($sql5);
-$ps5->bindValue(1, $buy_id, PDO::PARAM_STR);
+$ps5->bindValue(1, $_SESSION['buy_id'], PDO::PARAM_STR);
+$ps5->bindValue(2, $buy_id, PDO::PARAM_STR);
 // $ps5->bindValue(1,$_SESSION['cart_id'],PDO::PARAM_INT);
 $ps5->execute();
 $kosu2 = $ps5->fetch();
@@ -149,3 +151,4 @@ $kosu = $kosu2['0'];
     </div>
     
     </body>
+</html>
