@@ -2,7 +2,6 @@
     require "component.php";
     session_start();
     $_SESSION['cart_id'];
-$buy_id="01";
 $pdo = new PDO('mysql:host=mysql208.phy.lolipop.lan; dbname=LAA1418543-bteam; charset=utf8',
                             'LAA1418543', 'Baiueo1234');
         $shohin_id2=(String)$_POST['shohin_id'];
@@ -14,11 +13,48 @@ $pdo = new PDO('mysql:host=mysql208.phy.lolipop.lan; dbname=LAA1418543-bteam; ch
         // $ps->bindValue(3,$_POST['num'],PDO::PARAM_INT);
         // $ps->execute();
                     
-        $sql = "INSERT INTO `cart_details`(`cart_id`,`shohin_id`,`shohin_quanity`) VALUES (2,?,3)";
+    ?>    
+
+        <div class="couneainer text-center">
+        <h1>カート画面</h1>
+        <!doctype html>
+    <html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>Hello, shoping!</title>
+    </head>
+    <body>
+    <nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #FF9933;">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#"><img src="../img/rogo_u.png" width="20%"></a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+	
+		  <div class="collapse navbar-collapse" id="navbarsExample04">
+			<ul class="navbar-nav me-auto mb-2 mb-md-0">
+			  <li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="./shoping.php"><font size="5">トップ</font></a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#"><font size="5">お気に入り</font></a>
+			  </li>
+			</ul>
+			<form role="search">
+			  <input class="form-control" type="search" placeholder="レシピを検索" aria-label="Search">
+			</form>
+		  </div>
+		</div>
+	  </nav>
+        <?php
+        for ($i = 0; $i < count($cart_device_id); $i++) {
+            $sql = "INSERT INTO `cart_details`(`cart_id`,`shohin_id`,`shohin_quanity`) VALUES (2,?,3)";
         $ps=$pdo->prepare($sql);
-        // $ps->bindValue(1,$_SESSION['cart_id'],PDO::PARAM_INT);
-        $ps->bindValue(1,$shohin_id2,PDO::PARAM_STR);
-        // $ps->bindValue(3,$num,PDO::PARAM_INT);
+        $ps->bindValue(1,$_SESSION['cart_id'],PDO::PARAM_INT);
+        $ps->bindValue(2,$_SESSTION['buy_id'],PDO::PARAM_STR);
+        $ps->bindValue(3,$_SESSION['kosu'],PDO::PARAM_INT);
         $ps->execute();
 
 
@@ -33,7 +69,7 @@ $pdo = new PDO('mysql:host=mysql208.phy.lolipop.lan; dbname=LAA1418543-bteam; ch
         
         $sql3 = "SELECT `picture_pass` FROM `shohins` WHERE shohin_id = ?";
         $ps3=$pdo->prepare($sql3);
-        $ps3->bindValue(1,$buy_id,PDO::PARAM_STR);
+        $ps3->bindValue(1,$_SESSTION['buy_id'],PDO::PARAM_STR);
         $ps3->execute();
         $pic_pass3=$ps3->fetch();
         $pic_pass4=$pic_pass3['0'];
@@ -41,7 +77,7 @@ $pdo = new PDO('mysql:host=mysql208.phy.lolipop.lan; dbname=LAA1418543-bteam; ch
         //商品の名前を出そう
         $sql4 = "SELECT `shohin_name` FROM `shohins` WHERE shohin_id = ?";
         $ps4=$pdo->prepare($sql4);
-        $ps4->bindValue(1,$buy_id,PDO::PARAM_STR);
+        $ps4->bindValue(1,$_SESSTION['buy_id'],PDO::PARAM_STR);
         $ps4->execute();
         $shohin_name2=$ps4->fetch();
         $shohin_name3=$shohin_name2['0'];
@@ -54,7 +90,15 @@ $pdo = new PDO('mysql:host=mysql208.phy.lolipop.lan; dbname=LAA1418543-bteam; ch
         $ps5->execute();
         $kosu2=$ps5->fetch();
         $kosu=$kosu2['0'];
-
+        ?>
+        <?php
+            //販売価格をpriceに入れる
+            $price;
+            if ($sale_prices[$cart_device_id[$i]] == 0) {
+                $price = $default_prices[$cart_device_id[$i]];
+            } else {
+                $price = $sale_prices[$cart_device_id[$i]];
+            }
     //買い物カゴが空ではないとき(cartsとcart_detailsのmaxのcart_idを比較して同じだったら空じゃない)
     if($_SESSION['cart_id']==$cart_details_id3){
 
@@ -84,12 +128,12 @@ echo '</p>';
  echo '<span class="text-black">';
  echo "数量：";
  // echo $cart_quantity[$i];
- echo $hoge = $dbmng->deviceQuantitySearch($cart_device_id[$i] + 1,$_SESSION['cart_id']);
+//  echo $hoge = $dbmng->deviceQuantitySearch($cart_device_id[$i] + 1,$_SESSION['cart_id']);
  echo '</span>';
  echo '<span>';
  echo '<form action="./ka-to.php" method="post">';
  echo '<input type="hidden" name="deleteDevice" value="';
- echo $cart_device_id[$i];
+//  echo $cart_device_id[$i];
  echo '">';
  echo '<input class="btn btn-warning btn-lg text-dark" type="submit" value="削除">';
  echo '</form>';
@@ -140,42 +184,11 @@ echo '</p>';
         //配列セッションに格納
         $_SESSION["cart"] = $array;
     ?>
-    <!doctype html>
-    <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <title>Hello, shoping!</title>
-    </head>
-    <body>
-    <nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #FF9933;">
-		<div class="container-fluid">
-		  <a class="navbar-brand" href="#"><img src="../img/rogo_u.png" width="20%"></a>
-		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		  </button>
-	
-		  <div class="collapse navbar-collapse" id="navbarsExample04">
-			<ul class="navbar-nav me-auto mb-2 mb-md-0">
-			  <li class="nav-item">
-				<a class="nav-link active" aria-current="page" href="./shoping.php"><font size="5">トップ</font></a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="#"><font size="5">お気に入り</font></a>
-			  </li>
-			</ul>
-			<form role="search">
-			  <input class="form-control" type="search" placeholder="レシピを検索" aria-label="Search">
-			</form>
-		  </div>
-		</div>
-	  </nav>
+    
 
-    <div class="couneainer text-center">
+    <!-- <div class="couneainer text-center">
 
-    <div class="couneainer text-center">
-        <h1>カート画面</h1>
+   
 
         <?php
         $gokei=0;
@@ -213,7 +226,7 @@ echo '</p>';
             $gokei += $value['num']*$price;
         }
         echo "<div class = 'h3'>合計金額: ".number_format($gokei)."円</div>";
-        ?>
+        ?> -->
         <div><a href="shoping.php" class="h3">買い物を続ける</a></div>
         <button class="btn btn-warning btn-lg text-dark" type="button" onclick="location.href='../商品一覧試作/商品一覧試作.html'"><a href="confirm.html">購入</a></button>
     </div>

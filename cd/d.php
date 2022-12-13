@@ -20,7 +20,7 @@
       <div class="collapse navbar-collapse" id="navbarsExample04">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../webフロントエンド/catalog.html"><font size="5">トップ</font></a>
+            <!-- <a class="nav-link active" aria-current="page" href=""><font size="5">トップ</font></a> -->
           </li>
           <li class="nav-item">
             <a class="nav-link" href="login_complete.html"><font size="5">ログアウト</font></a>
@@ -45,11 +45,12 @@ $sql = 'SELECT * FROM shohins WHERE shohin_id = ?';
 $stmt=$dbh->prepare($sql);
 $stmt->execute([$_REQUEST['id']]);
 
+
 foreach($stmt->fetchAll() as $row) {
   echo '<div style="text-align:center;">';
   //名前ok
     //echo '<div class="textimg">';//center
-    echo '<img src="./img/'.$row['picture_pass'].'" width="420" height="350" class="rounded">';
+    echo '<img src="../img/'.$row['picture_pass'].'" width="420" height="350" class="rounded">';
     //echo '<p><img src="./img/'.$row['picture_pass'].'"></p>'; 
   //--------------------------------------------------------------------  
     echo '<form action="carttmp.php" method="post">';  
@@ -102,7 +103,14 @@ foreach($stmt->fetchAll() as $row) {
     echo '<p><input type="submit" value="カートに追加"></p>';
     echo '</form>';
 }
+<<<<<<< HEAD
 echo '<a href="http://damp-tosu-9116.hippy.jp/catalog.php">戻る</a>'
+=======
+session_start();
+$_SESSION['buy_id']=$_REQUEST['id'];
+$_SESSION['kosu']=$count;
+echo '<a href="http://fancy-naha-9512.noor.jp/catalog.php">戻る</a>'
+>>>>>>> 802b8021723046af278f0486cf3cbe61119288cd
 ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
