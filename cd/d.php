@@ -104,7 +104,7 @@ foreach($stmt->fetchAll() as $row) {
     echo '</form>';
 }
 session_start();
-$_SESSION['buy_id']=$_REQUEST['id'];
+$_SESSION['buy_id']=$id;
 $_SESSION['kosu']=$count;
 echo '<a href="http://fancy-naha-9512.noor.jp/catalog.php">戻る</a>'
 ?>
