@@ -1,11 +1,7 @@
 <!doctype html>
 <html lang="ja">
   <head>
-    <style>
-    body{
-      padding: 50px 0px;
-    }
-      </style>
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,9 +9,14 @@
     <!-- <link href="css/style.css"rel="stylesheet"type="text/css"> -->
 
     <title>商品詳細</title>
+    <style>
+    body{
+      padding: 50px 0px;
+    }
+      </style>
   </head>
   <body>
-<nav class="navbar navbar-expand-md navbar-dark fixde-top" aria-label="Fourth navbar example" style="background-color: #FF9933;">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" aria-label="Fourth navbar example" style="background-color: #FF9933;">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="../img/rogo_u.png" width="20%"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
@@ -111,8 +112,13 @@ foreach($stmt->fetchAll() as $row) {
 session_start();
 $_SESSION['buy_id']=$_REQUEST['id'];
 $_SESSION['kosu']=$count;
-echo '<a href="http://fancy-naha-9512.noor.jp/catalog.php">戻る</a>'
+//echo '<a href="http://fancy-naha-9512.noor.jp/catalog.php">戻る</a>'
+echo '<a href="http://fancy-naha-9512.noor.jp/catalog.php"><button class="btn btn-warning btn-col-mdd-10 p-10 text-white text-center" >商品一覧</button>';
 ?>
+   
+  </body>
+</html>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
