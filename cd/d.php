@@ -111,7 +111,15 @@ foreach($stmt->fetchAll() as $row) {
 session_start();
 $_SESSION['buy_id']=$_REQUEST['id'];
 $_SESSION['kosu']=$count;
-echo '<a href="http://fancy-naha-9512.noor.jp/catalog.php">戻る</a>'
+//echo '<a href="http://fancy-naha-9512.noor.jp/catalog.php">戻る</a>'
+echo '<a href="http://fancy-naha-9512.noor.jp/catalog.php"><button class="btn btn-warning btn-col-mdd-10 p-10 text-white text-center" >商品一覧</button>';
+?>
+   
+  </body>
+</html>
+
+
+
 ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
