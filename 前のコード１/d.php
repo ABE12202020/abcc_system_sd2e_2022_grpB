@@ -8,9 +8,14 @@
     <!-- <link href="css/style.css"rel="stylesheet"type="text/css"> -->
 
     <title>商品詳細</title>
+    <style>
+      body{
+      padding: 50px 0px;
+      }
+      </style>
   </head>
   <body>
-<nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #FF9933;">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" aria-label="Fourth navbar example" style="background-color: #FF9933;">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="../img/rogo_u.png" width="20%"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
