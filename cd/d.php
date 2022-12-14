@@ -86,7 +86,7 @@ foreach($stmt->fetchAll() as $row) {
     echo '<div class="card-body">';
     echo '<h5 class="card-title text-warning">配送について<br>—————————————————————</h5>';
     echo '<dl class="text-dark text-left">';
-    echo '<dt>送料</dt><dd>	値段／件<br> ※送料は商品ごとにかかります。<br> ※配送先によって送料が異なる可能性があります。</dd>
+    echo '<dt>送料</dt><dd>	値段500円<br> ※送料は商品ごとにかかります。<br> ※配送先によって送料が異なる可能性があります。</dd>
           <dt>配送業者</dt><dd>	佐川急便（沖縄県・離島のみヤマト運輸）</dd>
           <dt>配送可能地域</dt><dd>全国</dd>';
     echo '</dl>';
