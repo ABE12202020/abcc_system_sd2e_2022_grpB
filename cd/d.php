@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="ja">
   <head>
+    <style>
+    body{
+      padding: 50px 0px;
+    }
+      </style>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +15,7 @@
     <title>商品詳細</title>
   </head>
   <body>
-<nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #FF9933;">
+<nav class="navbar navbar-expand-md navbar-dark fixde-top" aria-label="Fourth navbar example" style="background-color: #FF9933;">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="../img/rogo_u.png" width="20%"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
